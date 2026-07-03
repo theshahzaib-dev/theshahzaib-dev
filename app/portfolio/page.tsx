@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, type Variants } from "framer-motion";
-import { Download } from "lucide-react";
+import { Download, Facebook, Github, Linkedin, X } from "lucide-react";
 import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
 
 const coreStack = [
@@ -226,6 +226,32 @@ export default function PortfolioPage() {
                 Download Resume
               </Link>
             </Button>
+          </div>
+          <div className="gap-2 flex items-center justify-start">
+            <Link
+              className="p-2 outline-2 rounded-md"
+              href={"https://www.github.com/theshahzaib-dev"}
+            >
+              <Github />
+            </Link>
+            <Link
+              className="p-2 outline-2 rounded-md"
+              href={"https://www.github.com/theshahzaib-dev"}
+            >
+              <Linkedin />
+            </Link>
+            <Link
+              className="p-2 outline-2 rounded-md"
+              href={"https://www.github.com/theshahzaib-dev"}
+            >
+              <X />
+            </Link>
+            <Link
+              className="p-2 outline-2 rounded-md"
+              href={"https://www.github.com/theshahzaib-dev"}
+            >
+              <Facebook />
+            </Link>
           </div>
         </div>
 
