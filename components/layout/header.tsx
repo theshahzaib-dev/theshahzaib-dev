@@ -34,11 +34,11 @@ export function Header() {
         <div className="flex items-center gap-6">
           <Link href="/portfolio" className="group flex flex-col leading-none">
             <span className="text-xl font-extrabold tracking-tight">
-              Shahzaib
+              TheShahzaibDev
             </span>
 
             <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
-              MERN Stack Developer
+              Building Modern Web Experiences
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-4 lg:gap-6">

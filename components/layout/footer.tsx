@@ -16,11 +16,11 @@ export function Footer() {
               className="group flex flex-col leading-none"
             >
               <span className="text-xl font-extrabold tracking-tight">
-                Shahzaib
+                TheShahzaibDev
               </span>
 
               <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
-                MERN Stack Developer
+                Building Modern Web Experiences
               </span>
             </Link>
 
@@ -108,7 +108,7 @@ export function Footer() {
 
         <div className="flex flex-col gap-4 border-t border-border/50 py-6 text-sm text-muted-foreground md:flex-row md:items-center md:justify-between">
           <p>
-            © {new Date().getFullYear()} Muhmmad Shahzaib. All rights reserved.
+            © {new Date().getFullYear()} TheShahzaibDev. All rights reserved.
           </p>
 
           <p>
