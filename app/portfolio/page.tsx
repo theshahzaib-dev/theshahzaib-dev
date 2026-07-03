@@ -4,6 +4,8 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { motion, type Variants } from "framer-motion";
+import { Download } from "lucide-react";
+import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
 
 const coreStack = [
   "MongoDB for document data and aggregation pipelines",
@@ -12,33 +14,124 @@ const coreStack = [
   "Node.js services with real-time WebSocket communication",
 ];
 
-const skills = [
-  "JavaScript / TypeScript",
-  "React / Next.js",
-  "Node.js / Express",
-  "MongoDB / Mongoose",
-  "WebSockets (Socket.IO)",
-  "Redux Toolkit / RTK Query",
+const skillCategories = [
+  {
+    title: "Frontend",
+    icon: "⚛️",
+    skills: [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "HTML5",
+      "CSS3",
+    ],
+  },
+  {
+    title: "Backend",
+    icon: "🛠️",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "JWT Authentication",
+      "MVC Architecture",
+      "Middleware",
+    ],
+  },
+  {
+    title: "Database",
+    icon: "🗄️",
+    skills: ["MongoDB", "Mongoose", "Aggregation", "CRUD Operations"],
+  },
+  {
+    title: "Tools & Deployment",
+    icon: "🚀",
+    skills: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "VS Code",
+      "Vercel",
+      "Netlify",
+      "MongoDB Atlas",
+    ],
+  },
 ];
 
 const projects = [
   {
-    title: "MERN Real-time Chat App",
+    title: "Velocity Admin Dashboard",
+    category: "Private Client Project",
+    status: "Private Repository",
+    image: "/projects/velocity-dashboard.png",
+
     description:
-      "A full-stack MERN chat application with rooms, typing indicators, online status, and message persistence.",
-    tech: ["React", "Node.js", "Socket.IO", "MongoDB"],
+      "A logistics management dashboard built for administrators to manage drivers, vehicles, bookings, customers, and system analytics through a secure role-based interface.",
+
+    role: [
+      "Designed and developed the complete Admin Dashboard",
+      "Integrated REST APIs",
+      "Implemented secure authentication",
+      "Built responsive dashboard UI",
+      "Managed application state",
+    ],
+
+    technologies: [
+      "React",
+      "Redux Toolkit",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+    ],
+
+    features: [
+      "Dashboard Analytics",
+      "Driver Management",
+      "Vehicle Management",
+      "Booking Management",
+      "Authentication",
+      "Responsive Design",
+    ],
+
+    live: "",
+    github: "",
   },
+
   {
-    title: "MERN Portfolio CMS",
+    title: "Government Graduate College Lodhran",
+    category: "Official College Website",
+    status: "Live",
+
+    image: "/projects/ggcl.png",
+
     description:
-      "Admin-driven MERN platform powering this portfolio with CRUD for projects, skills, and content sections.",
-    tech: ["Next.js", "Express", "MongoDB", "RTK Query"],
-  },
-  {
-    title: "MERN Task & Analytics Dashboard",
-    description:
-      "Task management dashboard with role-based access, charts, filters, and server-side pagination.",
-    tech: ["React", "Express", "MongoDB", "Charting libraries"],
+      "A modern multi-page college website developed to provide students, faculty, and visitors with easy access to institutional information.",
+
+    role: [
+      "Frontend Development",
+      "Responsive Design",
+      "Multi-page Website",
+      "Performance Optimization",
+      "Deployment",
+    ],
+
+    technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript", "Vercel"],
+
+    features: [
+      "Homepage",
+      "Departments",
+      "Admissions",
+      "Faculty",
+      "Gallery",
+      "Contact",
+    ],
+
+    live: "https://your-link.com",
+    github: "",
   },
 ];
 
@@ -83,232 +176,222 @@ export default function PortfolioPage() {
     <div className="space-y-16">
       {/* Hero Section */}
       <motion.section
-        className="grid gap-10 md:grid-cols-[minmax(0,1.4fr)_minmax(0,1fr)] items-center"
+        className="grid items-center gap-14 lg:grid-cols-2"
         variants={sectionVariant}
         initial="hidden"
         animate="visible"
       >
-        <div className="space-y-6">
-          <span className="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-xs font-medium text-primary">
-            Available for freelance & remote work
+        {/* Left Side */}
+        <div className="space-y-8">
+          <span className="inline-flex items-center rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-400">
+            🚀 Available for Full-Time • Freelance • Remote
           </span>
 
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold tracking-tight text-primary">
-            Building clean, fast &{" "}
-            <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              real‑time
-            </span>{" "}
-            web experiences.
-          </h1>
+          <div className="space-y-4">
+            <h2 className="text-xl text-muted-foreground">Hi, I'm</h2>
 
-          <p className="max-w-xl text-sm sm:text-base text-muted-foreground">
-            I&apos;m a MERN stack developer focused on building production-ready
-            applications with React/Next.js, Node.js, Express, and MongoDB —
-            with real-time features when they matter.
-          </p>
+            <h1 className="text-3xl font-extrabold leading-tight lg:text-5xl">
+              Muhammad{" "}
+              <span className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+                Shahzaib
+              </span>
+            </h1>
 
-          <div className="flex flex-wrap items-center gap-4">
-            <Button size="lg" className="rounded-full px-6" asChild>
-              <Link href="/portfolio/projects">View projects</Link>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="rounded-full border-secondary/60 text-secondary hover:bg-secondary/10"
-              asChild
-            >
-              <Link href="/portfolio/contact">Let&apos;s chat</Link>
-            </Button>
+            <h3 className="text-xl font-semibold from-cyan-400 via-blue-500 to-indigo-500">
+              Full-Stack MERN Developer
+            </h3>
+
+            <p className="max-w-xl text-lg leading-8 text-muted-foreground">
+              I build scalable, high-performance web applications using React,
+              Next.js, Node.js, Express and MongoDB. My focus is creating
+              products that are fast, responsive and enjoyable to use.
+            </p>
           </div>
 
-          <div className="flex flex-wrap gap-4 text-xs sm:text-sm text-muted-foreground">
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-              Modern MERN stack (MongoDB, Express, React, Node)
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-              Real-time features with WebSockets / Socket.IO
-            </div>
-            <div className="flex items-center gap-2">
-              <span className="h-1.5 w-1.5 rounded-full bg-secondary" />
-              Clean, responsive UI with Tailwind + shadcn/ui
-            </div>
+          <div className="flex flex-wrap gap-4">
+            <Button asChild size="lg" className="rounded-full px-8">
+              <Link href="/portfolio/projects">Explore Projects</Link>
+            </Button>
+
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="rounded-full px-8"
+            >
+              <Link
+                href="/assets/docs/resume.pdf"
+                download={"Muhammad Shahzaib Resume.pdf"}
+              >
+                Download Resume
+              </Link>
+            </Button>
           </div>
         </div>
 
+        {/* Right Side */}
         <motion.div
-          className="border-primary/15 bg-gradient-to-b from-primary/5 to-background shadow-sm rounded-xl"
-          variants={{
-            hidden: { opacity: 0, x: 32 },
-            visible: {
-              opacity: 1,
-              x: 0,
-              transition: { duration: 0.7, ease: "easeOut" },
-            },
-          }}
+          className="relative flex justify-center"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
         >
-          <Card className="border-0 bg-transparent shadow-none">
-            <CardContent className="space-y-6 pt-6">
-              <div className="space-y-2">
-                <p className="text-xs font-medium uppercase text-secondary tracking-[0.2em]">
-                  Snapshot
-                </p>
-                <p className="text-lg font-semibold">Full-Stack JS Developer</p>
-              </div>
+          <div className="relative">
+            <div className="absolute -left-8 top-10 rounded-2xl border bg-card/80 p-4 shadow-xl backdrop-blur">
+              <p className="text-3xl font-bold text-cyan-400">6+</p>
+              <p className="text-sm text-muted-foreground">Projects</p>
+            </div>
 
-              <div className="grid grid-cols-2 gap-4 text-xs sm:text-sm">
-                <div className="space-y-1">
-                  <p className="text-muted-foreground">Experience</p>
-                  <p className="font-medium">+3 years with JavaScript</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-muted-foreground">Location</p>
-                  <p className="font-medium">Remote / Worldwide</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-muted-foreground">Focus</p>
-                  <p className="font-medium">MERN apps & APIs</p>
-                </div>
-                <div className="space-y-1">
-                  <p className="text-muted-foreground">Stack</p>
-                  <p className="font-medium">MongoDB, Express, React, Node</p>
-                </div>
-              </div>
+            <div className="absolute -right-8 top-24 rounded-2xl border bg-card/80 p-4 shadow-xl backdrop-blur">
+              <p className="text-3xl font-bold text-cyan-400">8+</p>
+              <p className="text-sm text-muted-foreground">Technologies</p>
+            </div>
 
-              <div className="space-y-2">
-                <p className="text-xs font-medium uppercase text-muted-foreground tracking-[0.2em]">
-                  Core skills
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  {skills.slice(0, 4).map((skill) => (
-                    <span
-                      key={skill}
-                      className="rounded-full bg-background/60 px-3 py-1 text-xs font-medium border border-border/60"
-                    >
-                      {skill}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </CardContent>
-          </Card>
+            <div className="absolute -left-10 bottom-10 rounded-2xl border bg-card/80 p-4 shadow-xl backdrop-blur">
+              <p className="text-xl font-semibold">MERN</p>
+
+              <p className="text-sm text-muted-foreground">Stack Developer</p>
+            </div>
+
+            <div className="absolute -right-10 bottom-2 rounded-2xl border bg-card/80 p-4 shadow-xl backdrop-blur">
+              <p className="text-xl font-semibold">🌍 Remote</p>
+
+              <p className="text-sm text-muted-foreground">Worldwide</p>
+            </div>
+
+            <div className="h-[520px] w-[420px] overflow-hidden rounded-[40px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 shadow-2xl">
+              <img
+                src="/assets/images/profile.png"
+                alt="Shahzaib Balouch"
+                className="h-full w-full object-cover"
+              />
+            </div>
+          </div>
         </motion.div>
       </motion.section>
 
       {/* MERN stack overview */}
       <motion.section
-        className="space-y-6"
+        className="space-y-10"
         variants={sectionVariant}
         initial="hidden"
         animate="visible"
       >
-        <div className="space-y-3">
-          <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-            The MERN stack I work with
+        <div className="max-w-3xl space-y-4">
+          <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-sm font-medium text-primary">
+            💻 What I Build
+          </span>
+
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Building modern web applications from idea to deployment.
           </h2>
-          <p className="max-w-2xl text-sm sm:text-base text-muted-foreground">
-            I don&apos;t just use MERN as a buzzword. I understand how each part
-            fits together and how to structure apps so they stay fast and
-            maintainable as they grow.
+
+          <p className="text-base leading-8 text-muted-foreground">
+            I build responsive, scalable, and user-friendly web applications
+            using the MERN stack. My focus is on creating clean interfaces,
+            secure backend APIs, and maintainable code that solves real-world
+            business problems.
           </p>
         </div>
 
-        <div className="grid gap-4 md:grid-cols-2">
-          {coreStack.map((item) => (
-            <motion.div
-              key={item}
-              className="border-border/70 bg-card/80 hover:border-primary/40 transition rounded-xl"
-              whileHover={{ y: -4, boxShadow: "0 18px 40px rgba(0,0,0,0.25)" }}
-            >
-              <CardContent className="flex items-start gap-3 p-4 text-sm text-muted-foreground">
-                <span className="mt-1 h-1.5 w-1.5 rounded-full bg-gradient-to-r from-primary to-secondary" />
-                <p>{item}</p>
-              </CardContent>
-            </motion.div>
-          ))}
+        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          <Card className="group border-border/60 bg-card/80 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-xl">
+            <CardContent className="space-y-4 p-6">
+              <div className="text-4xl">⚛️</div>
+
+              <h3 className="text-xl font-semibold">Frontend Development</h3>
+
+              <p className="text-sm leading-7 text-muted-foreground">
+                Building responsive and interactive user interfaces with React,
+                Next.js, Tailwind CSS, JavaScript, and reusable component
+                architecture.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group border-border/60 bg-card/80 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-xl">
+            <CardContent className="space-y-4 p-6">
+              <div className="text-4xl">🛠️</div>
+
+              <h3 className="text-xl font-semibold">Backend Development</h3>
+
+              <p className="text-sm leading-7 text-muted-foreground">
+                Developing secure RESTful APIs using Node.js, Express.js,
+                MongoDB, JWT authentication, and role-based access control.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group border-border/60 bg-card/80 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-xl">
+            <CardContent className="space-y-4 p-6">
+              <div className="text-4xl">🗄️</div>
+
+              <h3 className="text-xl font-semibold">Database Design</h3>
+
+              <p className="text-sm leading-7 text-muted-foreground">
+                Designing efficient MongoDB databases with Mongoose, data
+                validation, and scalable schemas for modern web applications.
+              </p>
+            </CardContent>
+          </Card>
+
+          <Card className="group border-border/60 bg-card/80 transition-all duration-300 hover:-translate-y-2 hover:border-primary hover:shadow-xl">
+            <CardContent className="space-y-4 p-6">
+              <div className="text-4xl">☁️</div>
+
+              <h3 className="text-xl font-semibold">Deployment</h3>
+
+              <p className="text-sm leading-7 text-muted-foreground">
+                Deploying modern web applications using Vercel, Netlify, GitHub,
+                and MongoDB Atlas with performance optimization and SEO best
+                practices.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </motion.section>
 
       {/* Skills overview */}
       <motion.section
-        className="space-y-6"
+        className="space-y-10"
         variants={sectionVariant}
         initial="hidden"
         animate="visible"
       >
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-              Skills & technologies
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              A modern MERN stack focused on performance, DX, and clean code.
-            </p>
-          </div>
+        <div className="max-w-3xl space-y-4">
+          <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-sm font-medium text-primary">
+            🛠️ Skills & Technologies
+          </span>
+
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Technologies I work with
+          </h2>
+
+          <p className="text-base leading-8 text-muted-foreground">
+            I use modern technologies to build scalable, maintainable, and
+            production-ready web applications with a strong focus on clean code
+            and user experience.
+          </p>
         </div>
 
-        <Card className="border-primary/10 bg-card/80">
-          <CardContent className="grid gap-4 p-4 sm:grid-cols-2 lg:grid-cols-3 sm:p-6">
-            {skills.map((skill) => (
-              <motion.div
-                key={skill}
-                className="flex items-center justify-between rounded-xl border border-border/60 bg-background/40 px-3 py-3 text-sm"
-                whileHover={{ y: -2, scale: 1.01 }}
-              >
-                <span>{skill}</span>
-                <span className="h-2 w-16 rounded-full bg-gradient-to-r from-primary to-secondary" />
-              </motion.div>
-            ))}
-          </CardContent>
-        </Card>
-      </motion.section>
+        <div className="grid gap-6 md:grid-cols-2">
+          {skillCategories.map((category) => (
+            <motion.div key={category.title} whileHover={{ y: -6 }}>
+              <Card className="h-full border-border/60 bg-card/80 transition-all hover:border-primary hover:shadow-xl">
+                <CardContent className="space-y-5 p-6">
+                  <div className="flex items-center gap-3">
+                    <span className="text-3xl">{category.icon}</span>
 
-      {/* Projects preview */}
-      <motion.section
-        className="space-y-6"
-        variants={sectionVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-              Featured projects
-            </h2>
-            <p className="text-sm text-muted-foreground">
-              MERN projects with real-world features like auth, dashboards,
-              chat, and real-time collaboration tools. Full data will later come
-              from the Node.js backend.
-            </p>
-          </div>
-          <Button variant="outline" size="sm" className="rounded-full" asChild>
-            <Link href="/portfolio/projects">View all projects</Link>
-          </Button>
-        </div>
+                    <h3 className="text-xl font-semibold">{category.title}</h3>
+                  </div>
 
-        <div className="grid gap-6 md:grid-cols-3">
-          {projects.map((project) => (
-            <motion.div
-              key={project.title}
-              className="flex h-full flex-col border-border/70 bg-card/80 transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
-              whileHover={{ y: -6, scale: 1.01 }}
-            >
-              <Card>
-                <CardHeader>
-                  <CardTitle className="text-base sm:text-lg">
-                    {project.title}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent className="flex flex-1 flex-col gap-4 text-sm text-muted-foreground">
-                  <p>{project.description}</p>
-                  <div className="mt-auto flex flex-wrap gap-2">
-                    {project.tech.map((t) => (
+                  <div className="flex flex-wrap gap-3">
+                    {category.skills.map((skill) => (
                       <span
-                        key={t}
-                        className="rounded-full bg-background px-2.5 py-1 text-[11px] font-medium border border-border/60"
+                        key={skill}
+                        className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium transition hover:bg-primary hover:text-primary-foreground"
                       >
-                        {t}
+                        {skill}
                       </span>
                     ))}
                   </div>
@@ -319,32 +402,46 @@ export default function PortfolioPage() {
         </div>
       </motion.section>
 
+      {/* Projects preview */}
+      <FeaturedProjects sectionVariant={sectionVariant} />
+
       {/* Contact / chat CTA */}
       <motion.section
-        className="space-y-6"
+        className="space-y-8"
         variants={sectionVariant}
         initial="hidden"
         animate="visible"
       >
-        <Card className="border-primary/20 bg-gradient-to-r from-primary/90 via-primary to-secondary shadow-lg">
-          <CardContent className="flex flex-col gap-6 p-6 text-primary-foreground md:flex-row md:items-center md:justify-between md:p-8">
-            <div className="space-y-2">
-              <h2 className="text-2xl sm:text-3xl font-semibold tracking-tight">
-                Let&apos;s build something great.
+        <Card className="overflow-hidden border-primary/20 ">
+          <CardContent className="flex flex-col gap-8 p-8 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-2xl space-y-5">
+              <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
+                🚀 Available for Work
+              </span>
+
+              <h2 className="text-4xl font-bold">
+                Interested in working together?
               </h2>
-              <p className="text-sm sm:text-base text-primary-foreground/80 max-w-xl">
-                This portfolio will include a real-time chat so you can reach me
-                directly from the site once the backend is ready.
+
+              <p className="text-lg leading-8 text-muted-foreground">
+                Whether you need a modern business website, a full-stack MERN
+                application, or a custom admin dashboard, I'm ready to help
+                bring your ideas to life.
               </p>
             </div>
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
+
+            <div className="flex flex-col gap-4">
+              <Button size="lg" className="rounded-full px-8" asChild>
+                <Link href="/portfolio/contact">Contact Me</Link>
+              </Button>
+
               <Button
+                variant="outline"
                 size="lg"
-                variant="secondary"
-                className="rounded-full px-6 border border-primary/40"
+                className="rounded-full px-8"
                 asChild
               >
-                <Link href="/portfolio/chat">Open chat</Link>
+                <Link href="/resume.pdf">Download Resume</Link>
               </Button>
             </div>
           </CardContent>

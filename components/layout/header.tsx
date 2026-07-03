@@ -32,8 +32,14 @@ export function Header() {
       <div className="container mx-auto px-6 flex h-16 items-center justify-between gap-4">
         {/* Left: logo + desktop nav */}
         <div className="flex items-center gap-6">
-          <Link href="/portfolio" className="text-xl font-bold tracking-tight">
-            Portfolio
+          <Link href="/portfolio" className="group flex flex-col leading-none">
+            <span className="text-xl font-extrabold tracking-tight">
+              Shahzaib
+            </span>
+
+            <span className="text-xs text-muted-foreground group-hover:text-primary transition-colors">
+              MERN Stack Developer
+            </span>
           </Link>
           <nav className="hidden md:flex items-center gap-4 lg:gap-6">
             {navLinks.map((link) => (
@@ -44,7 +50,7 @@ export function Header() {
                   "text-sm font-medium transition-colors rounded-full px-3 pt-1 pb-2",
                   isActive(link.href)
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-foreground hover:bg-accent"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent",
                 )}
               >
                 {link.label}
@@ -55,6 +61,12 @@ export function Header() {
 
         {/* Right: theme + mobile toggle */}
         <div className="flex items-center gap-2">
+          <Link
+            href="/portfolio/contact"
+            className="hidden rounded-full hover:bg-primary outline-1 text-primary px-5 py-2 text-sm font-medium hover:text-primary-foreground transition hover:scale-105 md:inline-flex"
+          >
+            Hire Me
+          </Link>
           <ThemeToggle />
           <button
             type="button"
@@ -80,7 +92,7 @@ export function Header() {
                   "flex items-center rounded-lg px-3 py-2 text-sm font-medium transition-colors",
                   isActive(link.href)
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                    : "text-muted-foreground hover:bg-accent hover:text-foreground",
                 )}
               >
                 {link.label}
