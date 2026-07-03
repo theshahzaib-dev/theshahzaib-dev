@@ -13,11 +13,81 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+
 export const metadata: Metadata = {
-  title: "Muhammad Asad's Portfolio",
-  description: "Muhammad Asad's Portfolio",
+  metadataBase: new URL("https://theshahzaibdev.online"),
+
+  title: {
+    default: "Muhammad Shahzaib | Full-Stack MERN Developer",
+    template: "%s | TheShahzaibDev",
+  },
+
+  description:
+    "Muhammad Shahzaib is a Full-Stack MERN Developer specializing in React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS. Explore my portfolio, projects, and professional experience.",
+
+  keywords: [
+    "Muhammad Shahzaib",
+    "Shahzaib Balouch",
+    "TheShahzaibDev",
+    "MERN Stack Developer",
+    "Full Stack Developer",
+    "React Developer",
+    "Next.js Developer",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "JavaScript",
+    "Portfolio",
+    "Pakistan Developer",
+  ],
+
+  authors: [
+    {
+      name: "Muhammad Shahzaib",
+      url: "https://theshahzaibdev.online",
+    },
+  ],
+
+  creator: "Muhammad Shahzaib",
+
+  publisher: "TheShahzaibDev",
+
+  alternates: {
+    canonical: "https://theshahzaibdev.online",
+  },
+
+  openGraph: {
+    title: "Muhammad Shahzaib | Full-Stack MERN Developer",
+    description:
+      "Explore the portfolio of Muhammad Shahzaib featuring modern web applications, MERN stack projects, and professional development work.",
+    url: "https://theshahzaibdev.online",
+    siteName: "TheShahzaibDev",
+    locale: "en_US",
+    type: "website",
+
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Shahzaib Portfolio",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Muhammad Shahzaib | Full-Stack MERN Developer",
+    description:
+      "Explore my portfolio, featured projects, and technical expertise in the MERN Stack.",
+    images: ["/og-image.png"],
+  },
+
   icons: {
     icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
   },
 };
 
