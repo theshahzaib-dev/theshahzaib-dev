@@ -179,22 +179,6 @@ export default function PortfolioPage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="max-w-3xl space-y-4">
-          <span className="inline-block rounded-full border border-primary/20 bg-primary/5 px-4 py-1 text-sm font-medium text-primary">
-            💻 What I Build
-          </span>
-
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Building modern web applications from idea to deployment.
-          </h2>
-
-          <p className="text-base leading-8 text-muted-foreground">
-            I build responsive, scalable, and user-friendly web applications
-            using the MERN stack. My focus is on creating clean interfaces,
-            secure backend APIs, and maintainable code that solves real-world
-            business problems.
-          </p>
-        </div>
         <TitleSection
           sectionVariant={sectionVariant}
           title={"Building modern web applications from idea to deployment."}
@@ -262,7 +246,6 @@ export default function PortfolioPage() {
       </motion.section>
 
       {/* Skills overview */}
-
       <motion.section
         className="space-y-10"
         variants={sectionVariant}
@@ -317,21 +300,14 @@ export default function PortfolioPage() {
       >
         <Card className="overflow-hidden border-primary/20 ">
           <CardContent className="flex flex-col gap-8 p-8 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-2xl space-y-5">
-              <span className="inline-flex rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
-                🚀 Available for Work
-              </span>
-
-              <h2 className="text-4xl font-bold">
-                Interested in working together?
-              </h2>
-
-              <p className="text-lg leading-8 text-muted-foreground">
-                Whether you need a modern business website, a full-stack MERN
-                application, or a custom admin dashboard, I'm ready to help
-                bring your ideas to life.
-              </p>
-            </div>
+            <TitleSection
+              sectionVariant={sectionVariant}
+              title={"Interested in working together?"}
+              subTitle={"🚀 Available for Work"}
+              description={
+                "Whether you need a modern business website, a full-stack MERN application, or a custom admin dashboard, I'm ready to help bring your ideas to life."
+              }
+            />
 
             <div className="flex flex-col gap-4">
               <Button size="lg" className="rounded-full px-8" asChild>
