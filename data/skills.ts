@@ -173,3 +173,50 @@ export const services = [
     icon: "🗄️",
   },
 ];
+
+// Skill Categories
+export const skillCategories = [
+  {
+    title: "Frontend",
+    icon: "⚛️",
+    skills: [
+      "React.js",
+      "Next.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Redux Toolkit",
+      "HTML5",
+      "CSS3",
+    ],
+  },
+  {
+    title: "Backend",
+    icon: "🛠️",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "REST API",
+      "JWT Authentication",
+      "MVC Architecture",
+      "Middleware",
+    ],
+  },
+  {
+    title: "Database",
+    icon: "🗄️",
+    skills: ["MongoDB", "Mongoose", "Aggregation", "CRUD Operations"],
+  },
+  {
+    title: "Tools & Deployment",
+    icon: "🚀",
+    skills: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "VS Code",
+      "Vercel",
+      "Netlify",
+      "MongoDB Atlas",
+    ],
+  },
+];

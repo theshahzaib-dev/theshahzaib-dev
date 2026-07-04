@@ -8,52 +8,10 @@ import { Download, Facebook, Github, Linkedin, X } from "lucide-react";
 import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
 import Hero from "@/components/Hero";
 import TitleSection from "@/components/TitleSection";
+import Technologies from "@/components/Technologies";
+import Interested from "@/components/Interested";
 
-const skillCategories = [
-  {
-    title: "Frontend",
-    icon: "⚛️",
-    skills: [
-      "React.js",
-      "Next.js",
-      "JavaScript",
-      "Tailwind CSS",
-      "Redux Toolkit",
-      "HTML5",
-      "CSS3",
-    ],
-  },
-  {
-    title: "Backend",
-    icon: "🛠️",
-    skills: [
-      "Node.js",
-      "Express.js",
-      "REST API",
-      "JWT Authentication",
-      "MVC Architecture",
-      "Middleware",
-    ],
-  },
-  {
-    title: "Database",
-    icon: "🗄️",
-    skills: ["MongoDB", "Mongoose", "Aggregation", "CRUD Operations"],
-  },
-  {
-    title: "Tools & Deployment",
-    icon: "🚀",
-    skills: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "VS Code",
-      "Vercel",
-      "Netlify",
-      "MongoDB Atlas",
-    ],
-  },
-];
+
 
 const projects = [
   {
@@ -246,86 +204,13 @@ export default function PortfolioPage() {
       </motion.section>
 
       {/* Skills overview */}
-      <motion.section
-        className="space-y-10"
-        variants={sectionVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <TitleSection
-          sectionVariant={sectionVariant}
-          title={"Technologies I work with"}
-          subTitle={"🛠️ Skills & Technologies"}
-          description={
-            "I use modern technologies to build scalable, maintainable, andproduction-ready web applications with a strong focus on clean code and user experience."
-          }
-        />
-        <div className="grid gap-6 md:grid-cols-2">
-          {skillCategories.map((category) => (
-            <motion.div key={category.title} whileHover={{ y: -6 }}>
-              <Card className="h-full border-border/60 bg-card/80 transition-all hover:border-primary hover:shadow-xl">
-                <CardContent className="space-y-5 p-6">
-                  <div className="flex items-center gap-3">
-                    <span className="text-3xl">{category.icon}</span>
-
-                    <h3 className="text-xl font-semibold">{category.title}</h3>
-                  </div>
-
-                  <div className="flex flex-wrap gap-3">
-                    {category.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium transition hover:bg-primary hover:text-primary-foreground"
-                      >
-                        {skill}
-                      </span>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </div>
-      </motion.section>
+      <Technologies  sectionVariant={sectionVariant} />
 
       {/* Projects preview */}
       <FeaturedProjects sectionVariant={sectionVariant} />
 
       {/* Contact / chat CTA */}
-      <motion.section
-        className="space-y-8"
-        variants={sectionVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <Card className="overflow-hidden border-primary/20 ">
-          <CardContent className="flex flex-col gap-8 p-8 lg:flex-row lg:items-center lg:justify-between">
-            <TitleSection
-              sectionVariant={sectionVariant}
-              title={"Interested in working together?"}
-              subTitle={"🚀 Available for Work"}
-              description={
-                "Whether you need a modern business website, a full-stack MERN application, or a custom admin dashboard, I'm ready to help bring your ideas to life."
-              }
-            />
-
-            <div className="flex flex-col gap-4">
-              <Button size="lg" className="rounded-full px-8" asChild>
-                <Link href="/portfolio/contact">Contact Me</Link>
-              </Button>
-
-              <Button
-                variant="outline"
-                size="lg"
-                className="rounded-full px-8"
-                asChild
-              >
-                <Link href="/resume.pdf">Download Resume</Link>
-              </Button>
-            </div>
-          </CardContent>
-        </Card>
-      </motion.section>
+      <Interested sectionVariant={sectionVariant} />
     </div>
   );
 }

@@ -1,164 +1,11 @@
 "use client";
 
+import TitleSection from "@/components/TitleSection";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { experiences, highlights, journey } from "@/data/data";
 import { motion, type Variants } from "framer-motion";
-
-const journey = [
-  {
-    year: "2021",
-    title: "Where It All Started",
-    description:
-      "While studying in 9th grade, my computer teacher noticed my interest and ability in HTML. He encouraged me to explore web development beyond the classroom, which became the foundation of my journey.",
-  },
-
-  {
-    year: "2022",
-    title: "Learning the Fundamentals",
-    description:
-      "I learned HTML, CSS, Bootstrap, JavaScript, C, C++, and the fundamentals of React.js while continuing my studies and building small projects to strengthen my programming skills.",
-  },
-
-  {
-    year: "2022 - 2023",
-    title: "Professional MERN Training",
-    description:
-      "Joined Tyser Institute of Computer Education & Resources, Lodhran, where I completed intensive training in the MERN Stack including React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and full-stack application development.",
-  },
-
-  {
-    year: "2023 - 2024",
-    title: "Arwa Technologies",
-    description:
-      "Started my professional career as a MERN Stack Developer Intern. I worked on real-world applications, collaborated with developers, and gained practical experience in building scalable web applications.",
-  },
-
-  {
-    year: "2024 - 2025",
-    title: "Client & Contract Projects",
-    description:
-      "Worked on multiple client and contract-based projects including dashboards, business websites, and custom web applications using modern JavaScript technologies.",
-  },
-
-  {
-    year: " 2026",
-    title: "Government Graduate College Website",
-    description:
-      "Developed the official website for Government Graduate College Lodhran, creating a responsive multi-page website that is now publicly accessible for students and visitors.",
-  },
-
-  {
-    year: "Present",
-    title: "Growing Every Day",
-    description:
-      "I'm continuously improving my skills, expanding my portfolio, and actively looking for opportunities where I can contribute, learn, and grow as a Full-Stack Software Developer.",
-  },
-];
-
-export const achievements = [
-  {
-    title: "Government Graduate College Lodhran",
-    description:
-      "Designed and developed the official multi-page website for Government Graduate College Lodhran, delivering a responsive and modern experience for students, faculty, and visitors.",
-  },
-
-  {
-    title: "Teaching & Mentoring",
-    description:
-      "Supported faculty members by helping students learn programming fundamentals including C language, databases, and practical web development concepts while continuing to strengthen my own technical and communication skills.",
-  },
-
-  {
-    title: "Private Client Projects",
-    description:
-      "Developed dashboards, business websites, and custom web applications for clients using React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS.",
-  },
-];
-
-const experiences = [
-  {
-    company: "Arwa Technologies",
-    role: "MERN Stack Developer Intern",
-    duration: "March 2024 – September 2024",
-    type: "Internship",
-    description:
-      "Worked with the MERN stack to build responsive web applications, integrate REST APIs, develop reusable React components, collaborate with senior developers, and gain practical experience in professional software development.",
-
-    technologies: [
-      "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "Tailwind CSS",
-      "REST API",
-      "Git",
-    ],
-  },
-
-  {
-    company: "Contract-Based Development",
-    role: "Full-Stack MERN Developer",
-    duration: "2024 – Present",
-    type: "Freelance / Contract",
-
-    description:
-      "Worked with startups and private clients on dashboards, business websites, admin panels, and custom web applications. Delivered complete solutions from frontend development to backend APIs and deployment.",
-
-    technologies: [
-      "Next.js",
-      "React",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Vercel",
-      "Netlify",
-    ],
-  },
-
-  {
-    company: "Government Graduate College Lodhran",
-    role: "Web Developer",
-    duration: "Project-Based",
-
-    type: "Client Project",
-
-    description:
-      "Designed and developed the official multi-page website for Government Graduate College Lodhran with a modern responsive interface, clean structure, and optimized performance.",
-
-    technologies: [
-      "Next.js",
-      "Tailwind CSS",
-      "TypeScript",
-      "Responsive Design",
-    ],
-  },
-];
-
-const highlights = [
-  {
-    title: "💻 Full-Stack Development",
-    description:
-      "I build complete web applications using React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS. From responsive user interfaces to secure REST APIs, I enjoy developing products from idea to deployment.",
-  },
-
-  {
-    title: "🚀 Real-World Projects",
-    description:
-      "I've worked on private client dashboards, institutional websites, admin panels, and custom business solutions. Every project has strengthened my problem-solving skills and understanding of production-ready development.",
-  },
-
-  {
-    title: "📚 Continuous Learning",
-    description:
-      "Technology evolves quickly, so I continuously improve my skills by building projects, exploring modern tools, studying best practices, and learning from experienced developers and open-source communities.",
-  },
-
-  {
-    title: "🤝 Collaboration",
-    description:
-      "Alongside development, I've supported my teachers by helping fellow students understand programming concepts such as C language, databases, and web development fundamentals, which improved my communication and teamwork skills.",
-  },
-];
+import Link from "next/link";
 
 const sectionVariant: Variants = {
   hidden: { opacity: 0, y: 24 },
@@ -201,34 +48,74 @@ export default function AboutPage() {
     <div className="space-y-12">
       {/* My Journey into Full-Stack Development */}
       <motion.section
-        className="max-w-4xl space-y-6"
+        className="grid items-center gap-10 lg:grid-cols-4"
         variants={sectionVariant}
         initial="hidden"
         animate="visible"
       >
-        <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-          👋 About Me
-        </span>
+        {/* Left Content (75%) */}
+        <div className="space-y-6 lg:col-span-3">
+          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
+            👋 About Me
+          </span>
 
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          My Journey into Full-Stack Development
-        </h1>
+          <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
+            From Curiosity to
+            <span className="text-primary"> Full-Stack Development</span>
+          </h1>
 
-        <p className="text-lg leading-8 text-muted-foreground">
-          I'm <strong>Muhammad Shahzaib</strong>, a Full-Stack MERN Developer
-          from Pakistan passionate about building scalable web applications with
-          React, Next.js, Node.js, Express.js, MongoDB, and Tailwind CSS.
-        </p>
+          <p className="text-lg leading-8 text-muted-foreground">
+            I'm <strong>Muhammad Shahzaib</strong>, a Full-Stack MERN Developer
+            from Pakistan passionate about building fast, scalable, and
+            user-focused web applications using React, Next.js, Node.js,
+            Express.js, MongoDB, and TypeScript.
+          </p>
 
-        <p className="leading-8 text-muted-foreground">
-          My journey started in 9th grade when my computer teacher encouraged me
-          to explore web development after recognizing my interest in HTML.
-          Since then, I've continued learning, completed professional MERN
-          training, worked as a MERN Stack Developer Intern, delivered client
-          projects, contributed to my college community through mentoring, and
-          developed the official website for Government Graduate College
-          Lodhran.
-        </p>
+          <p className="leading-8 text-muted-foreground">
+            My journey into web development began in 9th grade when my computer
+            teacher recognized my interest in HTML and encouraged me to pursue
+            programming beyond the classroom. Since then, I've completed
+            professional MERN Stack training, gained internship experience,
+            delivered freelance and contract projects, mentored fellow students,
+            and developed the official website for Government Graduate College
+            Lodhran.
+          </p>
+
+          <div className="flex flex-wrap gap-4 pt-2">
+            <Button asChild>
+              <Link href="/contact">Let's Connect</Link>
+            </Button>
+
+            <Button variant="outline" asChild>
+              <Link
+                href="/assets/docs/resume.pdf"
+                download={"Muhammad Shahzaib Resume.pdf"}
+              >
+                Download Resume
+              </Link>
+            </Button>
+          </div>
+        </div>
+
+        {/* Right Image (25%) */}
+        <div className="flex justify-center lg:justify-end">
+          <motion.div
+            whileHover={{
+              scale: 1.02,
+            }}
+            className="relative w-full max-w-[280px]"
+          >
+            <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-primary/20 to-secondary/20 blur-xl" />
+
+            <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
+              <img
+                src="/assets/images/profile.png"
+                alt="Muhammad Shahzaib"
+                className="aspect-[3/4] w-full object-cover"
+              />
+            </div>
+          </motion.div>
+        </div>
       </motion.section>
 
       {/* What Defines Me */}
@@ -238,15 +125,14 @@ export default function AboutPage() {
         initial="hidden"
         animate="visible"
       >
-        <div>
-          <h2 className="text-3xl font-bold">What Defines Me</h2>
-
-          <p className="mt-2 max-w-3xl text-muted-foreground">
-            Beyond writing code, I enjoy solving problems, learning
-            continuously, and collaborating with others to build meaningful
-            digital products.
-          </p>
-        </div>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          subTitle={"👩‍💻 Who am I"}
+          description={
+            "Beyond writing code, I enjoy solving problems, learning continuously, and collaborating with others to build meaningful digital products."
+          }
+          title="What Defines Me"
+        />
 
         <div className="grid gap-6 md:grid-cols-2">
           {highlights.map((item) => (
@@ -272,21 +158,14 @@ export default function AboutPage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="max-w-3xl">
-          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-            🚀 My Journey
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold">
-            From Curiosity to Professional Development
-          </h2>
-
-          <p className="mt-4 leading-8 text-muted-foreground">
-            Every milestone has helped shape my skills as a developer—from
-            writing my first HTML page in school to building production-ready
-            applications for clients and organizations.
-          </p>
-        </div>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title={"From Curiosity to Professional Development"}
+          subTitle={"🚀 My Journey"}
+          description={
+            "Every milestone has helped shape my skills as a developer—from writing my first HTML page in school to building production-ready applications for clients and organizations."
+          }
+        />
 
         <div className="relative border-l border-primary/20 pl-8">
           {journey.map((item, index) => (
@@ -320,21 +199,14 @@ export default function AboutPage() {
         initial="hidden"
         animate="visible"
       >
-        <div>
-          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-            💼 Professional Experience
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold">
-            Building Real-World Solutions
-          </h2>
-
-          <p className="mt-3 max-w-3xl leading-8 text-muted-foreground">
-            My professional experience includes internships, contract-based
-            development, and client projects where I've built scalable web
-            applications using modern JavaScript technologies.
-          </p>
-        </div>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title={"Professional Experience"}
+          subTitle={"💼 My Journey"}
+          description={
+            "My professional experience includes internships, contract-based development, and client projects where I've built scalable web applications using modern JavaScript technologies."
+          }
+        />
 
         <div className="space-y-8">
           {experiences.map((exp) => (
@@ -377,6 +249,7 @@ export default function AboutPage() {
           ))}
         </div>
       </motion.section>
+
       {/* Testimonials */}
       <motion.section
         className="space-y-10"
@@ -384,21 +257,14 @@ export default function AboutPage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="max-w-3xl">
-          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-            💬 Testimonials
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold tracking-tight">
-            What People Say About My Work
-          </h2>
-
-          <p className="mt-4 leading-8 text-muted-foreground">
-            Building software is about more than writing code—it's about earning
-            trust, delivering quality, and creating solutions that people
-            genuinely value.
-          </p>
-        </div>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title={"Testimonials"}
+          subTitle={"💬 What Others Say"}
+          description={
+            "Hear from those who have worked with me and the impact of my work on their projects."
+          }
+        />
 
         {/* Featured Testimonial */}
 
