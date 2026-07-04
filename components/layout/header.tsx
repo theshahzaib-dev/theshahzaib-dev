@@ -9,11 +9,11 @@ import { ThemeToggle } from "@/components/theme-toggle";
 import { cn } from "@/lib/utils";
 
 const navLinks = [
-  { href: "/portfolio", label: "Home" },
-  { href: "/portfolio/about", label: "About" },
-  { href: "/portfolio/projects", label: "Projects" },
-  { href: "/portfolio/skills", label: "Skills" },
-  { href: "/portfolio/contact", label: "Contact" },
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/projects", label: "Projects" },
+  { href: "/skills", label: "Skills" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -21,8 +21,8 @@ export function Header() {
   const [open, setOpen] = React.useState(false);
 
   const isActive = (href: string) => {
-    if (href === "/portfolio") {
-      return pathname === "/portfolio";
+    if (href === "/") {
+      return pathname === "/";
     }
     return pathname?.startsWith(href);
   };
