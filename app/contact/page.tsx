@@ -12,25 +12,26 @@ import { CardContent } from "@/components/ui/card";
 
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { personalInfo } from "@/data/data";
 
 const contacts = [
   {
     title: "Email",
-    value: "your@email.com",
-    href: "mailto:theshahzaib.dev@gmail.com",
+    value: personalInfo.email,
+    href: "mailto:" + personalInfo.email,
     icon: Mail,
     description: "The best way to reach me for jobs and projects.",
   },
   {
     title: "Phone",
-    value: "+92 302 0549257",
-    href: "tel:+923020549257",
+    value: personalInfo.phone,
+    href: "tel:" + personalInfo.phone,
     icon: Phone,
     description: "Available during normal business hours.",
   },
   {
     title: "Location",
-    value: "Lodhran, Punjab, Pakistan",
+    value: personalInfo.location,
     href: "https://maps.google.com/?q=Lodhran,Pakistan",
     icon: MapPin,
     description: "Available for remote opportunities worldwide.",
@@ -38,21 +39,21 @@ const contacts = [
   {
     title: "LinkedIn",
     value: "Connect Professionally",
-    href: "https://linkedin.com/in/theshahzaibdev",
+    href: personalInfo.linkedin,
     icon: Linkedin,
     description: "Let's grow our professional network.",
   },
   {
     title: "GitHub",
     value: "View My Projects",
-    href: "https://github.com/theshahzaib-dev",
+    href: personalInfo.github,
     icon: Github,
     description: "Explore my repositories and code.",
   },
   {
     title: "Portfolio",
     value: "theshahzaibdev.online",
-    href: "https://theshahzaibdev.online",
+    href: personalInfo.portfolio,
     icon: Globe,
     description: "Browse my latest work and projects.",
   },

@@ -109,7 +109,7 @@ const Hero = ({ sectionVariant }: HeroProps) => {
             <p className="text-sm text-muted-foreground">Worldwide</p>
           </div>
 
-          <div className="h-[520px] w-[420px] overflow-hidden rounded-[40px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 shadow-2xl">
+          <div className="h-90 w-90 overflow-hidden rounded-[40px] border border-cyan-500/20 bg-gradient-to-br from-cyan-500/10 to-blue-600/10 shadow-2xl">
             <img
               src="/assets/images/profile.png"
               alt="Shahzaib Balouch"
