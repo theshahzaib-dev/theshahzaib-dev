@@ -1,91 +1,319 @@
-# Portfolio Site - Frontend
+# 🚀 Muhammad Shahzaib — Portfolio
 
-## Tech Stack
-- **Framework**: Next.js 14 (App Router)
-- **Language**: TypeScript
-- **Styling**: Tailwind CSS
-- **UI Components**: shadcn/ui
-- **State Management**: Redux Toolkit (RTK)
-- **Theme**: Dark/Light mode support
+Welcome to my personal portfolio website.
 
-## Project Structure
+This portfolio showcases my work, skills, projects, and journey as a Full-Stack MERN Developer. It is built using modern web technologies with a strong focus on performance, responsive design, clean architecture, and user experience.
+
+🌐 **Live Website:** https://theshahzaibdev.online
+
+---
+
+## 📖 About
+
+I'm **Muhammad Shahzaib**, a Full-Stack MERN Developer from Pakistan passionate about building modern web applications.
+
+I specialize in creating scalable applications using:
+
+- React.js
+- Next.js
+- Node.js
+- Express.js
+- MongoDB
+- TypeScript
+
+This portfolio represents both my technical skills and the real projects I've developed throughout my learning journey and professional experience.
+
+---
+
+# ✨ Features
+
+- Modern responsive design
+- Dark & Light theme
+- Smooth page animations with Framer Motion
+- Fully responsive layout
+- Project showcase
+- Skills overview
+- Professional timeline
+- Testimonials
+- Contact page
+- SEO optimized
+- Fast performance
+- Clean component architecture
+
+---
+
+# 🛠 Tech Stack
+
+## Frontend
+
+- React.js
+- Next.js (App Router)
+- TypeScript
+- Tailwind CSS
+- shadcn/ui
+- Framer Motion
+
+## Backend
+
+- Node.js
+- Express.js
+- REST APIs
+- JWT Authentication
+- Role-Based Access Control
+
+## Database
+
+- MongoDB
+- Mongoose
+
+## Deployment
+
+- Vercel
+- Netlify
+
+## Version Control
+
+- Git
+- GitHub
+
+---
+
+# 📂 Project Structure
 
 ```
-frontend/
-├── app/
-│   ├── portfolio/          # Public portfolio pages (view-only)
-│   │   ├── layout.tsx      # Public layout with header/footer
-│   │   └── page.tsx        # Home page
-│   ├── admin/              # Admin pages (CRUD operations)
-│   │   ├── layout.tsx      # Admin layout with sidebar
-│   │   ├── login/          # Admin login
-│   │   └── page.tsx        # Admin dashboard
-│   ├── layout.tsx          # Root layout
-│   └── page.tsx            # Root redirects to /portfolio
-├── components/
-│   ├── ui/                 # shadcn/ui components
-│   ├── layout/             # Layout components (Header, Footer, Sidebar)
-│   └── providers/          # Context providers
-├── store/                  # Redux store configuration
-├── lib/                    # Utilities and helpers
-└── types/                  # TypeScript type definitions
+src
+│
+├── app
+│   ├── portfolio
+│   ├── about
+│   ├── projects
+│   ├── skills
+│   └── contact
+│
+├── components
+│   ├── ui
+│   ├── layout
+│   ├── shared
+│   └── sections
+│
+├── lib
+│
+├── hooks
+│
+└── utils
 ```
 
-## Getting Started
+---
 
-### Install Dependencies
+# 📸 Featured Projects
+
+### 🚚 Velocity Admin Dashboard
+
+A modern logistics administration dashboard built for managing business operations.
+
+**Highlights**
+
+- Responsive Admin UI
+- Dashboard Analytics
+- User Management
+- Authentication
+- Protected Routes
+
+**Tech**
+
+- React
+- Node.js
+- Express.js
+- MongoDB
+- Tailwind CSS
+
+---
+
+### 🏫 Government Graduate College Lodhran
+
+Official multi-page college website designed and developed for Government Graduate College Lodhran.
+
+**Highlights**
+
+- Responsive Design
+- Multi-page Website
+- Modern User Interface
+- Optimized Performance
+
+---
+
+### 💼 Personal Portfolio
+
+A professional developer portfolio showcasing projects, skills, experience, and contact information.
+
+**Built With**
+
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- shadcn/ui
+
+---
+
+# 🎯 Skills
+
+## Frontend
+
+- React.js
+- Next.js
+- TypeScript
+- JavaScript
+- HTML5
+- CSS3
+- Tailwind CSS
+- Bootstrap
+
+## Backend
+
+- Node.js
+- Express.js
+- REST API Development
+- Authentication
+- Authorization
+- Middleware
+
+## Database
+
+- MongoDB
+- Mongoose
+- Aggregation
+- CRUD Operations
+
+## Tools
+
+- Git
+- GitHub
+- Postman
+- VS Code
+- Vercel
+- Netlify
+
+---
+
+# 📚 Currently Learning
+
+I believe learning never stops.
+
+Currently exploring:
+
+- Docker
+- AWS
+- PostgreSQL
+- Prisma ORM
+- Advanced Next.js
+- System Design
+
+---
+
+# 🚀 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/theshahzaib-dev/theshahzaib-dev.git
+```
+
+Go to project directory
+
+```bash
+cd theshahzaib-dev
+```
+
+Install dependencies
+
 ```bash
 npm install
 ```
 
-### Run Development Server
+Run development server
+
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+Build for production
 
-### Build for Production
 ```bash
 npm run build
+```
+
+Start production server
+
+```bash
 npm start
 ```
 
-## Routes
+---
 
-### Public Routes (View-Only)
-- `/portfolio` - Home page
-- `/portfolio/about` - About section
-- `/portfolio/projects` - Projects showcase
-- `/portfolio/skills` - Skills/Technologies
-- `/portfolio/contact` - Contact page with chat
+# ⚙ Environment Variables
 
-### Admin Routes (Protected)
-- `/admin/login` - Admin login
-- `/admin` - Admin dashboard
-- `/admin/projects` - Manage projects (CRUD)
-- `/admin/skills` - Manage skills (CRUD)
-- `/admin/about` - Manage about section
-- `/admin/chat` - Chat management
-- `/admin/settings` - Site settings
+Create a `.env.local` file in the root directory.
 
-## Features Implemented
+Example:
 
-✅ Next.js 14 with TypeScript
-✅ Tailwind CSS configuration
-✅ shadcn/ui components setup
-✅ Redux Toolkit store setup
-✅ Theme provider (dark/light mode)
-✅ Basic routing structure
-✅ Layout components (Header, Footer, Sidebar)
-✅ Public and Admin route separation
+```env
+NEXT_PUBLIC_SITE_URL=https://theshahzaibdev.online
 
-## Next Steps
+NEXT_PUBLIC_EMAIL=theshahzaib.dev@gmail.com
 
-- [ ] Create API slice with RTK Query
-- [ ] Implement authentication flow
-- [ ] Build portfolio pages (Home, About, Projects, Skills)
-- [ ] Build admin CRUD interfaces
-- [ ] Implement WebSocket for chat
-- [ ] Add form validations
-- [ ] Add loading and error states
+NEXT_PUBLIC_LINKEDIN=https://linkedin.com/in/theshahzaibdev
+
+NEXT_PUBLIC_GITHUB=https://github.com/theshahzaib-dev
+```
+
+---
+
+# 📈 Future Improvements
+
+- Admin CMS
+- Blog System
+- Dynamic Project Management
+- Contact Form Backend
+- Email Notifications
+- Visitor Analytics
+- Downloadable Resume
+- Project Filtering
+- Search Functionality
+- Multi-language Support
+
+---
+
+# 🤝 Connect With Me
+
+Portfolio
+
+https://theshahzaibdev.online
+
+GitHub
+
+https://github.com/theshahzaib-dev
+
+LinkedIn
+
+https://linkedin.com/in/theshahzaibdev
+
+Email
+
+theshahzaib.dev@gmail.com
+
+---
+
+# 📄 License
+
+This project is licensed under the MIT License.
+
+Feel free to fork this repository for learning purposes.
+
+---
+
+# ⭐ Support
+
+If you like this project, consider giving it a ⭐ on GitHub.
+
+Thank you for visiting my portfolio!
