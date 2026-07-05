@@ -17,6 +17,7 @@ const Interested = ({ sectionVariant }: { sectionVariant: any }) => {
         <CardContent className="flex flex-col gap-8 p-8 lg:flex-row lg:items-center lg:justify-between">
           <TitleSection
             sectionVariant={sectionVariant}
+            center={false}
             title={"Interested in working together?"}
             subTitle={"🚀 Available for Work"}
             description={
