@@ -1,5 +1,7 @@
 "use client";
 
+import { useState } from "react";
+import { toast } from "sonner";
 import Link from "next/link";
 import { motion, type Variants } from "framer-motion";
 import { Button } from "@/components/ui/button";
@@ -13,6 +15,7 @@ import { CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { personalInfo } from "@/data/data";
+import TitleSection from "@/components/TitleSection";
 
 const contacts = [
   {
@@ -81,6 +84,59 @@ const sectionVariant: Variants = {
 };
 
 export default function ContactPage() {
+  const [loading, setLoading] = useState(false);
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value,
+    }));
+  };
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    setLoading(true);
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.message || "Something went wrong.");
+      }
+
+      toast.success("Message sent successfully!");
+
+      setFormData({
+        name: "",
+        email: "",
+        company: "",
+        subject: "",
+        message: "",
+      });
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div className="space-y-24">
       {/* Hero */}
@@ -189,32 +245,31 @@ export default function ContactPage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="text-center">
-          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-            ✉️ Send a Message
-          </span>
-
-          <h2 className="mt-4 text-4xl font-bold">I'd Love to Hear From You</h2>
-
-          <p className="mx-auto mt-4 max-w-3xl leading-8 text-muted-foreground">
-            Tell me about your project, job opportunity, or collaboration. I'll
-            review your message and get back to you as soon as possible.
-          </p>
-        </div>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title="I'd Love to Hear From You"
+          subTitle="✉️ Send a Message"
+          description="Tell me about your project, job opportunity, or collaboration. I'll review your message and get back to you as soon as possible."
+        />
 
         <div className="grid gap-8 lg:grid-cols-3">
           {/* Contact Form */}
 
           <Card className="lg:col-span-2">
             <CardContent className="p-8">
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid gap-6 md:grid-cols-2">
                   <div>
                     <label className="mb-2 block text-sm font-medium">
                       Full Name
                     </label>
-
-                    <Input placeholder="John Doe" />
+                    <Input
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      placeholder="John Doe"
+                      required
+                    />
                   </div>
 
                   <div>
@@ -222,7 +277,14 @@ export default function ContactPage() {
                       Email Address
                     </label>
 
-                    <Input type="email" placeholder="john@example.com" />
+                    <Input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      placeholder="john@example.com"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -232,7 +294,12 @@ export default function ContactPage() {
                       Company (Optional)
                     </label>
 
-                    <Input placeholder="Company Name" />
+                    <Input
+                      name="company"
+                      value={formData.company}
+                      onChange={handleChange}
+                      placeholder="Company Name"
+                    />
                   </div>
 
                   <div>
@@ -240,7 +307,13 @@ export default function ContactPage() {
                       Subject
                     </label>
 
-                    <Input placeholder="Project Discussion" />
+                    <Input
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleChange}
+                      placeholder="Project Discussion"
+                      required
+                    />
                   </div>
                 </div>
 
@@ -248,16 +321,25 @@ export default function ContactPage() {
                   <label className="mb-2 block text-sm font-medium">
                     Message
                   </label>
-
                   <Textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
                     rows={8}
                     placeholder="Tell me about your project..."
+                    required
                   />
                 </div>
 
-                <Button size="lg" className="w-full">
+                <Button
+                  type="submit"
+                  size="lg"
+                  className="w-full cursor-pointer"
+                  disabled={loading}
+                >
                   <Send className="mr-2 h-4 w-4" />
-                  Send Message
+
+                  {loading ? "Sending..." : "Send Message"}
                 </Button>
               </form>
             </CardContent>

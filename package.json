@@ -1,5 +1,5 @@
 {
-  "name": "frontend",
+  "name": "TheShahzaibDev",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -19,7 +19,7 @@
     "embla-carousel-react": "^8.6.0",
     "framer-motion": "^12.23.24",
     "lucide-react": "^0.555.0",
-    "next": "^9.3.3",
+    "next": "^16.2.10",
     "next-themes": "^0.4.6",
     "nodemailer": "^9.0.3",
     "radix-ui": "^1.6.1",
