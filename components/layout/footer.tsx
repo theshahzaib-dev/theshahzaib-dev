@@ -12,7 +12,7 @@ export function Footer() {
 
           <div className="space-y-4">
             <Link
-              href="/portfolio"
+              href="/"
               className="group flex flex-col leading-none"
             >
               <span className="text-xl font-extrabold tracking-tight">
@@ -45,15 +45,15 @@ export function Footer() {
 
               <br />
 
-              <Link href="/portfolio/about">About</Link>
+              <Link href="/about">About</Link>
 
               <br />
 
-              <Link href="/portfolio/projects">Projects</Link>
+              <Link href="/projects">Projects</Link>
 
               <br />
 
-              <Link href="/portfolio/contact">Contact</Link>
+              <Link href="/contact">Contact</Link>
             </div>
           </div>
 
