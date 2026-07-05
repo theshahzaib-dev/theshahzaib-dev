@@ -62,7 +62,7 @@ export function Header() {
         {/* Right: theme + mobile toggle */}
         <div className="flex items-center gap-2">
           <Link
-            href="/portfolio/contact"
+            href="/contact"
             className="hidden rounded-full hover:bg-primary outline-1 text-primary px-5 py-2 text-sm font-medium hover:text-primary-foreground transition hover:scale-105 md:inline-flex"
           >
             Hire Me
