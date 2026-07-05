@@ -32,7 +32,7 @@ export default function FeaturedProjects({
     >
       {/* Heading */}
 
-      <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+      <div className="">
         <TitleSection
           sectionVariant={sectionVariant}
           title="Turning ideas into real-world web applications."
@@ -42,7 +42,7 @@ export default function FeaturedProjects({
     
 
         <Button asChild variant="outline" className="rounded-full">
-          <Link href="/portfolio/projects">View All Projects</Link>
+          <Link href="/projects">View All Projects</Link>
         </Button>
       </div>
 
