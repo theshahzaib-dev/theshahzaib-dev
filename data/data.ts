@@ -89,8 +89,8 @@ export const experiences = [
   {
     company: "Arwa Technologies",
     role: "MERN Stack Developer Intern",
-    duration: "March 2024 – September 2024",
-    type: "Internship",
+    duration: "June 2023 – September 2024",
+    type: "Internship & Front End Developer",
     description:
       "Worked with the MERN stack to build responsive web applications, integrate REST APIs, develop reusable React components, collaborate with senior developers, and gain practical experience in professional software development.",
 

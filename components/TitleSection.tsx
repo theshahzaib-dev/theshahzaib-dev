@@ -32,7 +32,7 @@ const TitleSection = ({
         className={`max-w-3xl space-y-4 ${center ? "text-center mx-auto" : "text-left"}`}
       >
         <span
-          className={`inline-flex rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-medium text-primary ${hero ? "bg-primary text-primary-foreground" : ""}`}
+          className={`inline-flex rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-medium text-primary `}
         >
           {subTitle}
         </span>

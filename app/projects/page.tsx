@@ -3,14 +3,17 @@
 import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Github, Lock } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Github, Lock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { developmentProcess, otherProjects } from "@/data/projects";
-
-import { featuredProjects } from "@/data/projects";
+import {
+  developmentProcess,
+  featuredProjectsData,
+  otherProjects,
+} from "@/data/projects";
 import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
 import { stats } from "@/data/stats";
+import TitleSection from "@/components/TitleSection";
 
 const sectionVariant: Variants = {
   hidden: {
@@ -89,19 +92,15 @@ export default function ProjectsPage() {
         initial="hidden"
         animate="visible"
       >
-        <div className="text-center">
-          <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-            💼 More Work
-          </span>
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title={"More Projects"}
+          subTitle={"💼 Other Work"}
+          description={
+            "Alongside client work, I've built personal projects and learning applications to explore new technologies, improve problem-solving skills, and experiment with modern development practices."
+          }
+        />
 
-          <h2 className="mt-4 text-4xl font-bold">More Projects</h2>
-
-          <p className="mx-auto mt-4 max-w-3xl leading-8 text-muted-foreground">
-            Alongside client work, I've built personal projects and learning
-            applications to explore new technologies, improve problem-solving
-            skills, and experiment with modern development practices.
-          </p>
-        </div>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {otherProjects.map((project: any) => (
             <motion.div
@@ -110,13 +109,13 @@ export default function ProjectsPage() {
                 y: -8,
               }}
             >
-              <Card className="overflow-hidden h-full border-border/60 hover:border-primary transition">
-                <div className="relative h-48">
+              <Card className="overflow-hidden p-0 h-full border-border/60 hover:border-primary transition">
+                <div className="relative min-h-60 h-auto w-full">
                   <Image
                     src={project.image}
                     alt={project.title}
                     fill
-                    className="object-cover"
+                    className="object-cover w-full h-full"
                   />
                 </div>
 
@@ -126,9 +125,15 @@ export default function ProjectsPage() {
                       {project.category}
                     </span>
 
-                    <span className="rounded-full bg-primary/10 px-3 py-1 text-xs">
-                      {project.status}
-                    </span>
+                    <div className="flex gap-2">
+                      <span className="rounded-full bg-green-500/10 px-3 py-1 text-xs text-green-600">
+                        {project.status}
+                      </span>
+
+                      <span className="rounded-full border px-3 py-1 text-xs">
+                        {project.repo}
+                      </span>
+                    </div>
                   </div>
 
                   <h3 className="text-xl font-semibold">{project.title}</h3>
@@ -146,6 +151,30 @@ export default function ProjectsPage() {
                         {tech}
                       </span>
                     ))}
+                  </div>
+                  <div className="flex gap-3">
+                    {project.live && (
+                      <Button asChild>
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <ExternalLink className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
+                    {project.github && (
+                      <Button asChild>
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <Github className="h-4 w-4" />
+                        </a>
+                      </Button>
+                    )}
                   </div>
                 </div>
               </Card>

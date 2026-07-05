@@ -4,37 +4,37 @@ export const coreTechnologies = [
     name: "React.js",
     category: "Frontend",
     color: "from-cyan-500 to-blue-500",
-    icon: "React",
+    icon: "/assets/images/skills/react.svg",
   },
   {
     name: "Next.js",
     category: "Framework",
     color: "from-gray-800 to-black",
-    icon: "NextJS",
+    icon: "assets/images/skills/next.svg",
   },
   {
     name: "Node.js",
     category: "Backend",
     color: "from-green-500 to-emerald-600",
-    icon: "NodeJS",
+    icon: "assets/images/skills/node.svg",
   },
   {
     name: "Express.js",
     category: "API",
     color: "from-zinc-700 to-black",
-    icon: "ExpressJS",
+    icon: "assets/images/skills/express.svg",
   },
   {
     name: "MongoDB",
     category: "Database",
     color: "from-green-600 to-lime-500",
-    icon: "MongoDB",
+    icon: "assets/images/skills/mongodb.svg",
   },
   {
     name: "TypeScript",
     category: "Language",
     color: "from-blue-600 to-sky-500",
-    icon: "TypeScript",
+    icon: "assets/images/skills/typescript.svg",
   },
 ];
 

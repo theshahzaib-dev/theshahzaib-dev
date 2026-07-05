@@ -12,6 +12,7 @@ import {
 import { Button } from "@/components/ui/button";
 
 import ProjectCard from "./ProjectCard";
+import { featuredProjectsData } from "@/data/projects";
 import { projects } from "@/types/project-data";
 
 interface FeaturedProjectsProps {
@@ -73,11 +74,11 @@ export default function FeaturedProjects({
       >
         <CarouselContent className="-ml-6">
 
-          {projects.map((project:any) => (
+          {featuredProjectsData.map((project:any) => (
 
             <CarouselItem
               key={project.id}
-              className="pl-6 basis-full"
+              className="pl-0 basis-full"
             >
               <ProjectCard project={project} />
             </CarouselItem>

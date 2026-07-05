@@ -1,155 +1,155 @@
-export const featuredProjects = [
+// Featured Projects Data
+export const featuredProjectsData = [
   {
     id: 1,
+
     title: "Velocity Admin Dashboard",
-    subtitle: "Private Client Project",
-    role: "Frontend Developer",
-    image: "/projects/velocity-dashboard.png",
+
+    category: "Private Client Project",
+
+    status: "private",
+
+    image: "/assets/images/projects/velocity.png",
 
     description:
-      "Developed a modern administrator dashboard for managing drivers, dispatchers, users, trips, and operational data. Built responsive interfaces, integrated backend APIs, and focused on delivering a clean user experience for administrators.",
+      "Developed the administrator dashboard for a logistics management platform. The dashboard provides administrators with complete control over users, vehicles, bookings and system analytics.",
 
-    technologies: [
-      "Next.js",
-      "React",
-      "TypeScript",
-      "Tailwind CSS",
-      "REST API",
-    ],
-
-    features: [
+    role: [
+      "Built the complete Admin Dashboard",
+      "REST API Integration",
       "Authentication",
-      "Admin Dashboard",
-      "User Management",
-      "Trip Management",
+      "Dashboard Analytics",
       "Responsive UI",
     ],
 
-    live: "",
-    github: "",
-    privateRepo: true,
-  },
-
-  {
-    id: 2,
-    title: "Government Graduate College Lodhran",
-    subtitle: "Official College Website",
-    role: "Full-Stack Developer",
-
-    image: "/projects/ggcl.png",
-
-    description:
-      "Designed and developed the official website for Government Graduate College Lodhran. The website provides information about admissions, departments, faculty members, notices, and academic activities in a modern responsive interface.",
-
     technologies: [
+      "React.js",
       "Next.js",
-      "TypeScript",
       "Tailwind CSS",
+      "MongoDB Atlas",
+      "JWT",
       "Vercel",
     ],
 
     features: [
-      "SEO Optimized",
-      "Responsive Design",
-      "Multi-page Website",
-      "Performance Optimized",
+      "Dashboard Analytics",
+      "Bookings",
+      "Vehicles",
+      "Users",
+      "Authentication",
     ],
 
-    live: "https://YOUR-LIVE-LINK",
+    live: "https://velocitydispatch.vercel.app/",
 
-    github: "",
-    privateRepo: true,
+    github: undefined,
   },
 
   {
-    id: 3,
-    title: "Personal Portfolio",
-    subtitle: "Personal Project",
-    role: "Full-Stack Developer",
+    id: 2,
 
-    image: "/projects/portfolio.png",
+    title: "Government Graduate College Lodhran",
+
+    category: "Official Website",
+
+    status: "live",
+
+    image: "assets/images/projects/ggcl.png",
 
     description:
-      "A modern portfolio showcasing my projects, skills, professional experience, and development journey. Built with a strong focus on performance, accessibility, animations, and responsive design.",
+      "Designed and developed a responsive multi-page website for Government Graduate College Lodhran to provide students and visitors with academic information.",
 
-    technologies: [
-      "Next.js",
-      "TypeScript",
-      "Tailwind CSS",
-      "Framer Motion",
-    ],
+    role: ["Frontend Development", "Responsive Design", "Deployment"],
+
+    technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript", "Vercel"],
 
     features: [
-      "Dark Mode",
-      "SEO",
-      "Responsive Design",
-      "Animations",
+      "Homepage",
+      "Departments",
+      "Admissions",
+      "Faculty",
+      "Gallery",
+      "Contact",
     ],
 
-    live: "https://theshahzaibdev.online",
+    live: "https://",
 
-    github: "https://github.com/yourusername",
-
-    privateRepo: false,
+    github: "",
   },
 ];
 
 export const otherProjects = [
   {
-    title: "Authentication System",
-    category: "Personal",
-    image: "/projects/auth.png",
+    title: "BedSpace",
+    category: "Hotel Booking Platform",
+    image: "/assets/images/projects/bedspace.png",
+
     description:
-      "JWT authentication system with protected routes and role-based access control.",
+      "A modern multi-page hotel and bed space booking website for UAE accommodations. Users can browse available rooms, choose options for individuals, couples, or families, and complete their booking before arriving. Built as a fully responsive frontend application with a clean user experience.",
 
-    tech: ["React", "Node.js", "JWT"],
+    tech: ["React", "Next.js", "Tailwind CSS"],
 
-    status: "Completed",
+    status: "Live",
+    repo: "Public",
+    live: "https://bedspace.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/bedspace.git",
+  },
+  {
+    title: "Solution Carrier",
+    category: "Software Company Website",
+    image: "/assets/images/projects/sc.png",
+
+    description:
+      "Developed the responsive frontend website for Solution Carrier, a software company focused on delivering digital solutions and technology services. Built with Next.js and Tailwind CSS, the website features modern UI components, optimized performance, and a responsive user experience across all devices.",
+
+    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+
+    status: "Live",
+    repo: "Private",
+    live: "https://solution-carriers.vercel.app/",
+    github: null,
+  },
+  {
+    title: "Stratix Technologies",
+    category: "Software House Website",
+    image: "/assets/images/projects/stratix.png",
+
+    description:
+      "A responsive multi-page hotel booking website for UAE accommodations. Users can browse available rooms, explore accommodation options for individuals, couples, and families, and complete booking requests through a modern and intuitive interface. Built as a frontend application using Next.js and Tailwind CSS.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+
+    status: "Live",
+    repo: "Private",
+    live: "https://stratixtechnologies.vercel.app/",
+    github: null, // Private repository
   },
 
   {
-    title: "Real-Time Chat App",
-
-    category: "Learning",
-
-    image: "/projects/chat.png",
+    title: "Diverge AI",
+    category: "AI Landing Page",
+    image: "/assets/images/projects/diverge-ai.png",
 
     description:
-      "Built using Socket.IO to understand real-time communication and event-driven architecture.",
+      "Worked as the Frontend Developer to build the official website for Solution Carrier. Developed responsive pages and reusable UI components using Next.js, React, JavaScript, and Tailwind CSS, with deployment on Vercel.",
+    tech: ["React", "Next.js", "Tailwind CSS"],
 
-    tech: ["Socket.IO", "React", "Node.js"],
-
-    status: "Learning Project",
+    status: "Live",
+    repo: "Public",
+    live: "https://diverge-ai.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/diverge-ai.git", // Private repository
   },
 
   {
-    title: "Task Management",
-
-    category: "Personal",
-
-    image: "/projects/task.png",
+    title: "LogranGPT",
+    category: "AI Platform",
+    image: "/assets/images/projects/lodhrangpt.png",
 
     description:
-      "Simple task manager with CRUD operations and responsive UI.",
+      "Designed and developed the frontend website for Stratix Technologies, showcasing the company's services, technologies, portfolio, and business information through a modern, responsive interface.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Firebase", "Hugging Face"],
 
-    tech: ["React", "MongoDB"],
-
-    status: "Completed",
-  },
-
-  {
-    title: "Business Landing Page",
-
-    category: "Client",
-
-    image: "/projects/business.png",
-
-    description:
-      "Responsive landing page developed for a local business.",
-
-    tech: ["Next.js", "Tailwind"],
-
-    status: "Delivered",
+    status: "Live",
+    repo: "Private",
+    live: "https://lodhrangpt.vercel.app/",
   },
 ];
 
@@ -191,4 +191,3 @@ export const developmentProcess = [
     icon: "🚀",
   },
 ];
-

@@ -19,19 +19,19 @@ const sectionVariant: Variants = {
 const testimonials = [
   {
     name: "Prof. Mr. Muhammad Irfan Yasir",
-    role: "Government Graduate College Lodhran",
+    role: "Principal, Government Graduate College Lodhran",
     avatar: "/assets/images/testimonials/principal.png", // Optional
     quote:
       "Shahzaib developed the official website for our college with exceptional dedication and professionalism. The quality of his work is comparable to projects that often command a high commercial value. Although this was a contribution to our institution, we proudly recognized his efforts with a token of appreciation.",
     highlight: "Official Website Project",
   },
   {
-    name: "Prof. Asma Liaqat",
-    role: "Government Graduate College Lodhran",
-    avatar: "/assets/images/testimonials/asma.png", // Optional
+    name: "Muhammad Sarfraz",
+    role: "Freelance Client",
+    avatar: "/assets/images/testimonials/sarfraz.svg",
     quote:
-      "Shahzaib consistently demonstrated strong technical skills and a willingness to support both teachers and students. His passion for learning and helping others made him a valuable contributor to our department.",
-    highlight: "Academic Mentorship",
+      "Shahzaib delivered a modern, responsive website that matched our requirements and branding. Throughout the project, he communicated clearly, addressed feedback quickly, and maintained a professional approach. His attention to detail and commitment to quality made the collaboration smooth and successful.",
+    highlight: "Frontend Development",
   },
   {
     name: "Mr. Azhar Shahzad",

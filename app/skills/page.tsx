@@ -1,7 +1,13 @@
 "use client";
 
+import TitleSection from "@/components/TitleSection";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { coreTechnologies, learningSkills, services, techStack } from "@/data/skills";
+import {
+  coreTechnologies,
+  learningSkills,
+  services,
+  techStack,
+} from "@/data/skills";
 import { motion, type Variants } from "framer-motion";
 
 const skillGroups = [
@@ -56,28 +62,16 @@ export default function SkillsPage() {
   return (
     <div className="space-y-10">
       {/* Hero */}
-      <motion.section
-        className="mx-auto max-w-5xl space-y-6 text-center"
-        variants={sectionVariant}
-        initial="hidden"
-        animate="visible"
-      >
-        <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-4 py-2 text-sm font-medium text-primary">
-          🚀 Skills & Technologies
-        </span>
-
-        <h1 className="text-5xl font-bold tracking-tight md:text-6xl">
-          Building Modern Web
-          <br />
-          Applications with MERN
-        </h1>
-
-        <p className="mx-auto max-w-3xl text-lg leading-8 text-muted-foreground">
-          I specialize in developing scalable full-stack applications using the
-          MERN stack. From responsive user interfaces to secure backend APIs and
-          database design, I enjoy turning ideas into reliable digital products.
-        </p>
-      </motion.section>
+      <TitleSection
+        sectionVariant={sectionVariant}
+        title={"Building Modern Web Applications with MERN"}
+        subTitle={"🚀 Skills & Technologies"}
+        description={
+          "I specialize in developing scalable full-stack applications using the MERN stack. From responsive user interfaces to secure backend APIs and database design, I enjoy turning ideas into reliable digital products."
+        }
+        center={true}
+        hero={true}
+      />
 
       {/* Skills Grid */}
       <motion.section
