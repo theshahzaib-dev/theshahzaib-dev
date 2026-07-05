@@ -17,7 +17,7 @@ interface TitleSectionProps {
 const TitleSection = ({
   sectionVariant,
   buttons = false,
-  center = false,
+  center = true,
   hero = false,
   title = "Let's Build Something Amazing Together",
   subTitle = "📬 Contact Me",
