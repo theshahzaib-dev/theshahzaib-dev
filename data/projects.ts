@@ -71,7 +71,7 @@ export const featuredProjectsData = [
       "Contact",
     ],
 
-    live: "https://",
+    live: "https://government-college-site.vercel.app/",
 
     github: "",
   },
