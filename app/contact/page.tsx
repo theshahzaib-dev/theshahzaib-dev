@@ -140,43 +140,15 @@ export default function ContactPage() {
   return (
     <div className="space-y-24">
       {/* Hero */}
-      <motion.section
-        variants={sectionVariant}
-        initial="hidden"
-        animate="visible"
-        className="mx-auto max-w-5xl text-center"
-      >
-        <span className="inline-flex rounded-full border border-primary/20 bg-primary/5 px-5 py-2 text-sm font-medium text-primary">
-          📬 Contact Me
-        </span>
-
-        <h1 className="mt-6 text-5xl font-bold tracking-tight md:text-6xl">
-          Let's Build Something
-          <br />
-          Amazing Together
-        </h1>
-
-        <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-          Whether you're hiring for a full-time role, looking for a freelance
-          developer, or have an exciting project in mind, I'd love to hear from
-          you. Let's discuss how we can create something valuable together.
-        </p>
-
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button size="lg" asChild>
-            <Link href="#contact-form">
-              Send Message
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
-
-          <Button size="lg" variant="outline" asChild>
-            <Link href="/resume.pdf" target="_blank">
-              Download Resume
-            </Link>
-          </Button>
-        </div>
-      </motion.section>
+      <TitleSection 
+      sectionVariant={sectionVariant}
+      title={"Let's Build Something Amazing Together"}
+      subTitle={"📬 Contact Me"}
+      description={
+        "Whether you're hiring for a full-time role, looking for a freelance developer, or have an exciting project in mind, I'd love to hear from you. Let's discuss how we can create something valuable together."
+      } 
+      hero={true}
+      />
 
       {/* Contact Information */}
       <motion.section
