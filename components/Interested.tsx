@@ -27,7 +27,7 @@ const Interested = ({ sectionVariant }: { sectionVariant: any }) => {
 
           <div className="flex flex-col gap-4">
             <Button size="lg" className="rounded-full px-8" asChild>
-              <Link href="/portfolio/contact">Contact Me</Link>
+              <Link href="/contact">Contact Me</Link>
             </Button>
 
             <Button
