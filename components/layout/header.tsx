@@ -32,7 +32,7 @@ export function Header() {
       <div className="container mx-auto px-6 flex h-16 items-center justify-between gap-4">
         {/* Left: logo + desktop nav */}
         <div className="flex items-center gap-6">
-          <Link href="/portfolio" className="group flex flex-col leading-none">
+          <Link href="/" className="group flex flex-col leading-none">
             <span className="text-xl font-extrabold tracking-tight">
               TheShahzaibDev
             </span>
