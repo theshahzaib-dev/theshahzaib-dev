@@ -2,7 +2,7 @@ export const personalInfo = {
   firstName: "Muhammad",
   lastName: "Shahzaib",
   logo: "TheShahzaibDev",
-  role:"Full Stack MERN Developer",
+  role: "Full Stack MERN Developer",
   tag: "Building Modern Web Experiences",
   email: "theshahzaib.dev@gmail.com",
   phone: "+92 302 0549257",
@@ -12,7 +12,6 @@ export const personalInfo = {
   facebook: "https://www.facebook.com/mshahzaibbalouch80",
   portfolio: "https://www.theshahzaibdev.online",
 };
-
 
 export const journey = [
   {
@@ -33,35 +32,42 @@ export const journey = [
     year: "2022 - 2023",
     title: "Professional MERN Training",
     description:
-      "Joined Tyser Institute of Computer Education & Resources, Lodhran, where I completed intensive training in the MERN Stack including React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and full-stack application development.",
+      "Joined Tareen Institute of Computer Education & Resources (TICER), Lodhran, where I completed intensive training in the MERN Stack including React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and full-stack application development.",
   },
 
   {
-    year: "2023 - 2024",
+    year: "2024",
     title: "Arwa Technologies",
     description:
-      "Started my professional career as a MERN Stack Developer Intern. I worked on real-world applications, collaborated with developers, and gained practical experience in building scalable web applications.",
+      "Started my professional career as a Front End Developer at Arwa Technologies, building responsive web applications with React.js, Next.js, and Tailwind CSS. Also contributed to a legacy C#/ASP.NET Core migration project, broadening my experience beyond the JavaScript stack.",
   },
 
   {
     year: "2024 - 2025",
-    title: "Client & Contract Projects",
+    title: "Solution Carrier",
     description:
-      "Worked on multiple client and contract-based projects including dashboards, business websites, and custom web applications using modern JavaScript technologies.",
+      "Joined Solution Carrier as a backend-focused developer, working on production Node.js applications including system architecture, authentication, and authorization. Contributed to BedSpace, a hotel booking platform, and Click Desire, an ecommerce platform.",
   },
 
   {
-    year: " 2026",
-    title: "Government Graduate College Website",
+    year: "2025 - 2026",
+    title: "Focused on Education",
     description:
-      "Developed the official website for Government Graduate College Lodhran, creating a responsive multi-page website that is now publicly accessible for students and visitors.",
+      "Paused active development to focus full-time on my Intermediate studies in Computer Science, Mathematics, and Statistics at Government Graduate College Lodhran.",
+  },
+
+  {
+    year: "2026",
+    title: "Back to Building",
+    description:
+      "Resumed active development and built the official website for Government Graduate College Lodhran — a responsive, multi-page site now live for students and visitors.",
   },
 
   {
     year: "Present",
     title: "Growing Every Day",
     description:
-      "I'm continuously improving my skills, expanding my portfolio, and actively looking for opportunities where I can contribute, learn, and grow as a Full-Stack Software Developer.",
+      "Currently building a full-stack HRM platform with React, Node.js, and PostgreSQL, while actively seeking full-time opportunities as a Full-Stack Developer.",
   },
 ];
 
@@ -88,17 +94,16 @@ export const achievements = [
 export const experiences = [
   {
     company: "Arwa Technologies",
-    role: "MERN Stack Developer Intern",
-    duration: "June 2023 – September 2024",
-    type: "Internship & Front End Developer",
+    role: "Front End Developer",
+    duration: "March 2024 – September 2024",
+    type: "Full-Time",
     description:
-      "Worked with the MERN stack to build responsive web applications, integrate REST APIs, develop reusable React components, collaborate with senior developers, and gain practical experience in professional software development.",
+      "Built responsive web applications using React.js, Next.js, and Tailwind CSS. Developed reusable UI components, collaborated with designers and developers to ship production-ready features, and contributed to a legacy C#/ASP.NET Core migration project alongside core frontend work.",
 
     technologies: [
       "React.js",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "Next.js",
+      "JavaScript",
       "Tailwind CSS",
       "REST API",
       "Git",
@@ -106,32 +111,30 @@ export const experiences = [
   },
 
   {
-    company: "Contract-Based Development",
-    role: "Full-Stack MERN Developer",
-    duration: "2024 – Present",
-    type: "Freelance / Contract",
+    company: "Solution Carrier",
+    role: "Software Developer (Full-Stack)",
+    duration: "Octuber 2024 – February 2025",
+    type: "Full-Time",
 
     description:
-      "Worked with startups and private clients on dashboards, business websites, admin panels, and custom web applications. Delivered complete solutions from frontend development to backend APIs and deployment.",
+      "Worked as a backend-focused developer on production Node.js applications, including system architecture, authentication, and authorization. Built the frontend for BedSpace, a multi-page hotel booking platform, and developed core backend functionality — authentication, product management, and order processing — for Click Desire, an ecommerce platform.",
 
     technologies: [
-      "Next.js",
-      "React",
       "Node.js",
       "Express.js",
       "MongoDB",
       "JWT",
-      "Vercel",
-      "Netlify",
+      "REST API",
+      "Git",
     ],
   },
 
   {
     company: "Government Graduate College Lodhran",
     role: "Web Developer",
-    duration: "Project-Based",
+    duration: "July 2026",
 
-    type: "Client Project",
+    type: "Institutional Project",
 
     description:
       "Designed and developed the official multi-page website for Government Graduate College Lodhran with a modern responsive interface, clean structure, and optimized performance.",

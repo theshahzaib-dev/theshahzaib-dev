@@ -3,6 +3,52 @@ export const featuredProjectsData = [
   {
     id: 1,
 
+    title: "Arwa Technologies Company Website",
+
+    category: "Professional Experience",
+
+    status: "private",
+
+    image: "/assets/images/projects/arwa-technologies.png",
+
+    description:
+      "Developed the official company website for Arwa Technologies as part of a three-member development team during my time as a MERN Stack Developer. My responsibilities included building responsive frontend interfaces, integrating REST APIs, implementing authentication, and collaborating closely with the backend developer to deliver a fully functional, production-ready website.",
+
+    role: [
+      "Frontend Development",
+      "REST API Integration",
+      "Authentication",
+      "Responsive UI Development",
+      "Team Collaboration",
+    ],
+
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Company Profile",
+      "Team Members",
+      "Career Section",
+      "Authentication",
+      "Responsive Design",
+      "REST API Integration",
+    ],
+
+    live: undefined,
+
+    github: undefined,
+  },
+  {
+    id: 2,
+
     title: "Velocity Admin Dashboard",
 
     category: "Private Client Project",
@@ -45,7 +91,7 @@ export const featuredProjectsData = [
   },
 
   {
-    id: 2,
+    id: 3,
 
     title: "Government Graduate College Lodhran",
 
