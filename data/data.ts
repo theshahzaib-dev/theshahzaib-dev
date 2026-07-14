@@ -113,7 +113,7 @@ export const experiences = [
   {
     company: "Solution Carrier",
     role: "Software Developer (Full-Stack)",
-    duration: "Octuber 2024 – February 2025",
+    duration: "Octuber 2024 – March 2025",
     type: "Full-Time",
 
     description:
