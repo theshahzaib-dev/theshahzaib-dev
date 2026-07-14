@@ -117,7 +117,7 @@ export const featuredProjectsData = [
       "Contact",
     ],
 
-    live: "https://government-college-site.vercel.app/",
+    live: "https://ggclodhran.edu.pk/",
 
     github: "",
   },
