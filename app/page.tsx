@@ -207,7 +207,7 @@ export default function PortfolioPage() {
       <Technologies  sectionVariant={sectionVariant} />
 
       {/* Projects preview */}
-      <FeaturedProjects sectionVariant={sectionVariant} />
+      <FeaturedProjects buttonShow={true} sectionVariant={sectionVariant} />
 
       {/* Contact / chat CTA */}
       <Interested sectionVariant={sectionVariant} />

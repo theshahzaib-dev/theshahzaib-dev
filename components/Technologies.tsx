@@ -21,7 +21,7 @@ const Technologies = ({ sectionVariant }: TechnologiesProps) => {
           title={"Technologies I work with"}
           subTitle={"🛠️ Skills & Technologies"}
           description={
-            "I use modern technologies to build scalable, maintainable, andproduction-ready web applications with a strong focus on clean code and user experience."
+            "I use modern technologies to build scalable, maintainable and production-ready web applications with a strong focus on clean code and user experience."
           }
         />
         <div className="grid gap-6 md:grid-cols-2">

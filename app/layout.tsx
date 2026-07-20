@@ -104,7 +104,10 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          <Analytics/>
+          {
+            process.env.ENVIREMENT === "production" && <Analytics/>
+          }
+          
           <div className="min-h-screen flex flex-col">
             <Header />
             <main className="flex-1">

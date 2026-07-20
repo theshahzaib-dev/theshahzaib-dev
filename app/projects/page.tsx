@@ -3,9 +3,10 @@
 import { motion, type Variants } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, ExternalLink, Github, Lock } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import { useEffect, useState } from "react";
 import {
   developmentProcess,
   featuredProjectsData,
@@ -30,6 +31,41 @@ const sectionVariant: Variants = {
 };
 
 export default function ProjectsPage() {
+  const [visibleProjects, setVisibleProjects] = useState(6);
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      const large = window.innerWidth >= 1024; // lg breakpoint
+
+      setIsLargeScreen(large);
+      setVisibleProjects(large ? 6 : 4);
+    };
+
+    checkScreen();
+
+    window.addEventListener("resize", checkScreen);
+
+    return () => window.removeEventListener("resize", checkScreen);
+  }, []);
+
+  const handleViewMore = () => {
+    const increment = isLargeScreen ? 3 : 2;
+
+    setVisibleProjects((prev) =>
+      Math.min(prev + increment, otherProjects.length),
+    );
+  };
+
+  const handleShowLess = () => {
+    setVisibleProjects(isLargeScreen ? 6 : 4);
+
+    window.scrollTo({
+      top: document.getElementById("other-projects")?.offsetTop ?? 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div className="space-y-20">
       {/* Hero */}
@@ -82,9 +118,6 @@ export default function ProjectsPage() {
         </div>
       </motion.section>
 
-      {/* Featured Projects */}
-      <FeaturedProjects sectionVariant={sectionVariant} />
-
       {/* Other Projects */}
       <motion.section
         className="space-y-10"
@@ -102,9 +135,10 @@ export default function ProjectsPage() {
         />
 
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {otherProjects.map((project: any) => (
+          {otherProjects.slice(0, visibleProjects).map((project: any) => (
             <motion.div
               key={project.title}
+              id="other-projects"
               whileHover={{
                 y: -8,
               }}
@@ -180,6 +214,19 @@ export default function ProjectsPage() {
               </Card>
             </motion.div>
           ))}
+        </div>
+        <div className="mt-12 flex justify-center">
+          {visibleProjects < otherProjects.length ? (
+            <Button className="cursor-pointer" size="lg" onClick={handleViewMore}>
+              View More
+            </Button>
+          ) : (
+            otherProjects.length > (isLargeScreen ? 6 : 4) && (
+              <Button variant="outline" className="cursor-pointer" size="lg" onClick={handleShowLess}>
+                Show Less
+              </Button>
+            )
+          )}
         </div>
       </motion.section>
 

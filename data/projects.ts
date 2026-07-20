@@ -125,6 +125,128 @@ export const featuredProjectsData = [
 
 export const otherProjects = [
   {
+    id: 1,
+
+    title: "Arwa Technologies Company Website",
+
+    category: "Professional Experience",
+
+    status: "private",
+
+    image: "/assets/images/projects/arwa-technologies.png",
+
+    description:
+      "Developed the official company website for Arwa Technologies as part of a three-member development team during my time as a MERN Stack Developer. My responsibilities included building responsive frontend interfaces, integrating REST APIs, implementing authentication, and collaborating closely with the backend developer to deliver a fully functional, production-ready website.",
+
+    role: [
+      "Frontend Development",
+      "REST API Integration",
+      "Authentication",
+      "Responsive UI Development",
+      "Team Collaboration",
+    ],
+
+    tech: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Company Profile",
+      "Team Members",
+      "Career Section",
+      "Authentication",
+      "Responsive Design",
+      "REST API Integration",
+    ],
+
+    live: undefined,
+
+    github: undefined,
+  },
+  {
+    id: 2,
+
+    title: "Velocity Admin Dashboard",
+
+    category: "Private Client Project",
+
+    status: "private",
+
+    image: "/assets/images/projects/velocity.png",
+
+    description:
+      "Developed the administrator dashboard for a logistics management platform. The dashboard provides administrators with complete control over users, vehicles, bookings and system analytics.",
+
+    role: [
+      "Built the complete Admin Dashboard",
+      "REST API Integration",
+      "Authentication",
+      "Dashboard Analytics",
+      "Responsive UI",
+    ],
+
+    tech: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB Atlas",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Dashboard Analytics",
+      "Bookings",
+      "Vehicles",
+      "Users",
+      "Authentication",
+    ],
+
+    live: "https://velocitydispatch.vercel.app/",
+
+    github: undefined,
+  },
+
+  {
+    id: 3,
+
+    title: "Government Graduate College Lodhran",
+
+    category: "Official Website",
+
+    status: "live",
+
+    image: "/assets/images/projects/ggcl.png",
+
+    description:
+      "Designed and developed a responsive multi-page website for Government Graduate College Lodhran to provide students and visitors with academic information.",
+
+    role: ["Frontend Development", "Responsive Design", "Deployment"],
+
+    tech: ["Next.js", "React", "Tailwind CSS", "JavaScript", "Vercel"],
+
+    features: [
+      "Homepage",
+      "Departments",
+      "Admissions",
+      "Faculty",
+      "Gallery",
+      "Contact",
+    ],
+
+    live: "https://ggclodhran.edu.pk/",
+
+    github: "",
+  },
+  {
+    id: 4,
     title: "BedSpace",
     category: "Hotel Booking Platform",
     image: "/assets/images/projects/bedspace.png",
@@ -140,6 +262,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/bedspace.git",
   },
   {
+    id: 5,
     title: "Solution Carrier",
     category: "Software Company Website",
     image: "/assets/images/projects/sc.png",
@@ -155,6 +278,7 @@ export const otherProjects = [
     github: null,
   },
   {
+    id: 6,
     title: "Stratix Technologies",
     category: "Software House Website",
     image: "/assets/images/projects/stratix.png",
@@ -168,10 +292,10 @@ export const otherProjects = [
     live: "https://stratixtechnologies.vercel.app/",
     github: null, // Private repository
   },
-
   {
+    id: 7,
     title: "Diverge AI",
-    category: "AI Landing Page",
+    category: "AI Land7ing Page",
     image: "/assets/images/projects/diverge-ai.png",
 
     description:
@@ -183,8 +307,8 @@ export const otherProjects = [
     live: "https://diverge-ai.vercel.app/",
     github: "https://github.com/theshahzaib-dev/diverge-ai.git", // Private repository
   },
-
   {
+    id: 8,
     title: "LogranGPT",
     category: "AI Platform",
     image: "/assets/images/projects/lodhrangpt.png",
@@ -196,6 +320,132 @@ export const otherProjects = [
     status: "Live",
     repo: "Private",
     live: "https://lodhrangpt.vercel.app/",
+  },
+  {
+    id: 9,
+    title: "ClickDesire",
+    category: "E-Commerce Platform",
+    status: "private",
+    image: "/assets/images/projects/clickdesire.png",
+    description:
+      "Worked as the Backend Developer for a complete e-commerce platform. Developed scalable REST APIs, authentication, product management, order processing, and database architecture using Node.js, Express.js, and MongoDB.",
+    role: [
+      "Backend Development",
+      "REST API Development",
+      "Authentication",
+      "Database Design",
+      "API Integration",
+    ],
+
+    tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Mongoose"],
+
+    features: [
+      "Authentication",
+      "Products",
+      "Categories",
+      "Orders",
+      "Shopping Cart",
+      "REST APIs",
+    ],
+
+    live: undefined,
+    github: undefined,
+  },
+  {
+    id: 10,
+    title: "Rzana",
+    category: "Business Service Platform",
+    status: "private",
+    image: "/assets/images/projects/rzana.png",
+
+    description:
+      "Developed a complete full-stack platform for a UAE-based client offering car parking, hospitality, catering, and other business services. Built the public website, administrator dashboard, and backend APIs with a modern scalable architecture.",
+
+    role: [
+      "Full Stack Development",
+      "Admin Dashboard",
+      "Frontend Development",
+      "Backend Development",
+      "REST API Integration",
+    ],
+
+    tech: [
+      "React.js",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Formik",
+      "Yup",
+      "Framer Motion",
+    ],
+
+    features: [
+      "Admin Dashboard",
+      "Authentication",
+      "Service Management",
+      "Booking Management",
+      "Responsive Design",
+      "REST APIs",
+    ],
+
+    live: undefined,
+  },
+  {
+    id: 11,
+    title: "CallerLens",
+    category: "Caller Intelligence Dashboard",
+    status: "live",
+    image: "/assets/images/projects/callerlens.png",
+
+    description:
+      "Developed a modern caller intelligence dashboard that allows users to search caller history, check spam scores, and report suspicious phone numbers. Built with Next.js and TypeScript using interactive analytics and responsive dashboard components.",
+
+    role: [
+      "Frontend Development",
+      "Dashboard UI",
+      "Data Visualization",
+      "Responsive Design",
+    ],
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
+
+    features: [
+      "Caller Search",
+      "Spam Checker",
+      "Spam Reporting",
+      "Dashboard Analytics",
+      "Responsive UI",
+    ],
+
+    live: undefined,
+  },
+  {
+    id: 12,
+    title: "PhotoFusion",
+    category: "AI Photo Editor",
+    status: "live",
+    image: "/assets/images/projects/photofusion.png",
+
+    description:
+      "A modern web-based photo editor built with Next.js and TypeScript. Users can upload images and perform editing operations through a clean and responsive interface with real-time preview.",
+
+    role: [
+      "Frontend Development",
+      "UI Development",
+      "State Management",
+      "Responsive Design",
+    ],
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    features: [
+      "Image Upload",
+      "Photo Editing",
+      "Real-time Preview",
+      "Responsive Design",
+    ],
+
+    live: undefined,
   },
 ];
 

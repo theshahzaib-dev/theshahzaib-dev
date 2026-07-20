@@ -2,7 +2,7 @@ import React from "react";
 import { motion, type Variants } from "framer-motion";
 import { Button } from "./ui/button";
 import Link from "next/link";
-import { Github, Linkedin } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 import { personalInfo } from "@/data/data";
 
 interface HeroProps {
@@ -34,7 +34,7 @@ const Hero = ({ sectionVariant }: HeroProps) => {
           </h1>
 
           <h3 className="text-xl font-semibold from-cyan-400 via-blue-500 to-indigo-500">
-            {personalInfo.role }
+            {personalInfo.role}
           </h3>
 
           <p className="max-w-xl text-lg leading-8 text-muted-foreground">
@@ -46,7 +46,7 @@ const Hero = ({ sectionVariant }: HeroProps) => {
 
         <div className="flex flex-wrap gap-4">
           <Button asChild size="lg" className="rounded-full px-8">
-            <Link href="/portfolio/projects">Explore Projects</Link>
+            <Link href="/projects">Explore Projects</Link>
           </Button>
 
           <Button
@@ -65,16 +65,22 @@ const Hero = ({ sectionVariant }: HeroProps) => {
         </div>
         <div className="gap-2 flex items-center justify-start">
           <Link
-            className="p-2 outline-2 rounded-md"
+            className="p-2 outline-2 rounded-xs transition-all hover:text-foreground hover:bg-accent"
             href={personalInfo.github}
           >
             <Github />
           </Link>
           <Link
-            className="p-2 outline-2 rounded-md"
+            className="p-2 outline-2 rounded-xs transition-all hover:text-foreground hover:bg-accent"
             href={personalInfo.linkedin}
           >
             <Linkedin />
+          </Link>
+          <Link
+            className="p-2 outline-2 rounded-xs transition-all hover:text-foreground hover:bg-accent"
+            href={`mailto:${personalInfo.email}`}
+          >
+            <Mail />
           </Link>
         </div>
       </div>
