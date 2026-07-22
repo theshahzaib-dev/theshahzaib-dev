@@ -107,7 +107,7 @@ export default function FeaturedProjects({
                     </div>
 
                     <div className="space-y-5 p-6 w-full">
-                      <div className="grid lg:grid-cols-2 justify-between">
+                      <div className="grid space-y-3 lg:grid-cols-2 justify-between">
                         <div>
                           <h3 className="text-xl font-semibold">
                             {project.title}
