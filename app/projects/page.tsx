@@ -9,7 +9,6 @@ import { Card } from "@/components/ui/card";
 import { useEffect, useState } from "react";
 import {
   developmentProcess,
-  featuredProjectsData,
   otherProjects,
 } from "@/data/projects";
 import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
