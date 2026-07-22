@@ -10,8 +10,7 @@ import Hero from "@/components/Hero";
 import TitleSection from "@/components/TitleSection";
 import Technologies from "@/components/Technologies";
 import Interested from "@/components/Interested";
-
-
+import { testimonials } from "./about/page";
 
 const projects = [
   {
@@ -204,10 +203,63 @@ export default function PortfolioPage() {
       </motion.section>
 
       {/* Skills overview */}
-      <Technologies  sectionVariant={sectionVariant} />
+      <Technologies sectionVariant={sectionVariant} />
 
       {/* Projects preview */}
       <FeaturedProjects buttonShow={true} sectionVariant={sectionVariant} />
+
+      {/* Testimonials */}
+      <motion.section
+        className="space-y-10"
+        variants={sectionVariant}
+        initial="hidden"
+        animate="visible"
+      >
+        <TitleSection
+          sectionVariant={sectionVariant}
+          title={"Testimonials"}
+          subTitle={"💬 What Others Say"}
+          description={
+            "Hear from those who have worked with me and the impact of my work on their projects."
+          }
+        />
+
+        {/* Remaining Testimonials */}
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <motion.div key={testimonial.name} whileHover={{ y: -5 }}>
+              <Card className="h-full transition hover:border-primary hover:shadow-xl">
+                <CardContent className="space-y-6 p-6">
+                  <div className="text-4xl text-primary">“</div>
+
+                  <p className="leading-8 text-muted-foreground">
+                    {testimonial.quote}
+                  </p>
+
+                  <div className="flex items-center gap-4">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary text-lg font-bold text-primary-foreground">
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="rounded-full w-full h-full object-cover"
+                      />
+                    </div>
+
+                    <div>
+                      <h4 className="font-semibold">{testimonial.name}</h4>
+
+                      <p className="text-sm text-muted-foreground">
+                        {testimonial.role}
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
 
       {/* Contact / chat CTA */}
       <Interested sectionVariant={sectionVariant} />

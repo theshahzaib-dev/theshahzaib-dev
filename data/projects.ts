@@ -1,149 +1,25 @@
-// Featured Projects Data
-export const featuredProjectsData = [
-  {
-    id: 1,
-
-    title: "Arwa Technologies Company Website",
-
-    category: "Professional Experience",
-
-    status: "private",
-
-    image: "/assets/images/projects/arwa-technologies.png",
-
-    description:
-      "Developed the official company website for Arwa Technologies as part of a three-member development team during my time as a MERN Stack Developer. My responsibilities included building responsive frontend interfaces, integrating REST APIs, implementing authentication, and collaborating closely with the backend developer to deliver a fully functional, production-ready website.",
-
-    role: [
-      "Frontend Development",
-      "REST API Integration",
-      "Authentication",
-      "Responsive UI Development",
-      "Team Collaboration",
-    ],
-
-    technologies: [
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Vercel",
-    ],
-
-    features: [
-      "Company Profile",
-      "Team Members",
-      "Career Section",
-      "Authentication",
-      "Responsive Design",
-      "REST API Integration",
-    ],
-
-    live: undefined,
-
-    github: undefined,
-  },
-  {
-    id: 2,
-
-    title: "Velocity Admin Dashboard",
-
-    category: "Private Client Project",
-
-    status: "private",
-
-    image: "/assets/images/projects/velocity.png",
-
-    description:
-      "Developed the administrator dashboard for a logistics management platform. The dashboard provides administrators with complete control over users, vehicles, bookings and system analytics.",
-
-    role: [
-      "Built the complete Admin Dashboard",
-      "REST API Integration",
-      "Authentication",
-      "Dashboard Analytics",
-      "Responsive UI",
-    ],
-
-    technologies: [
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "MongoDB Atlas",
-      "JWT",
-      "Vercel",
-    ],
-
-    features: [
-      "Dashboard Analytics",
-      "Bookings",
-      "Vehicles",
-      "Users",
-      "Authentication",
-    ],
-
-    live: "https://velocitydispatch.vercel.app/",
-
-    github: undefined,
-  },
-
-  {
-    id: 3,
-
-    title: "Government Graduate College Lodhran",
-
-    category: "Official Website",
-
-    status: "live",
-
-    image: "assets/images/projects/ggcl.png",
-
-    description:
-      "Designed and developed a responsive multi-page website for Government Graduate College Lodhran to provide students and visitors with academic information.",
-
-    role: ["Frontend Development", "Responsive Design", "Deployment"],
-
-    technologies: ["Next.js", "React", "Tailwind CSS", "JavaScript", "Vercel"],
-
-    features: [
-      "Homepage",
-      "Departments",
-      "Admissions",
-      "Faculty",
-      "Gallery",
-      "Contact",
-    ],
-
-    live: "https://ggclodhran.edu.pk/",
-
-    github: "",
-  },
-];
-
 export const otherProjects = [
   {
-    id: 1,
+    id: 0,
 
-    title: "Arwa Technologies Company Website",
+    title: "WorkForce Pro - HR Management System",
 
-    category: "Professional Experience",
+    category: "Personal Project",
 
-    status: "private",
+    status: "In Process",
 
-    image: "/assets/images/projects/arwa-technologies.png",
+    image: "/assets/images/projects/workforce-pro.png",
 
     description:
-      "Developed the official company website for Arwa Technologies as part of a three-member development team during my time as a MERN Stack Developer. My responsibilities included building responsive frontend interfaces, integrating REST APIs, implementing authentication, and collaborating closely with the backend developer to deliver a fully functional, production-ready website.",
+      "Designed and developed WorkForce Pro, a full-stack HRM platform for managing employees, attendance, payroll, departments, and reports with secure role-based access.",
 
     role: [
-      "Frontend Development",
-      "REST API Integration",
-      "Authentication",
-      "Responsive UI Development",
-      "Team Collaboration",
+      "Full Stack Development",
+      "System Architecture",
+      "REST API Development",
+      "Database Design",
+      "Authentication & Authorization",
+      "Dashboard & Analytics Development",
     ],
 
     tech: [
@@ -154,74 +30,156 @@ export const otherProjects = [
       "Express.js",
       "MongoDB",
       "JWT",
+      "Redux Toolkit",
+      "Chart.js",
       "Vercel",
+      "MongoDB Atlas",
     ],
 
     features: [
-      "Company Profile",
-      "Team Members",
-      "Career Section",
-      "Authentication",
-      "Responsive Design",
-      "REST API Integration",
+      "Employee Management",
+      "Attendance Tracking",
+      "Leave Request Management",
+      "Payroll Management",
+      "Department & Designation Management",
+      "Role-Based Access Control",
+      "Dashboard Analytics",
+      "Employee Profile Management",
+      "Reports & Data Export",
+      "Responsive Admin Panel",
     ],
 
-    live: undefined,
+    live: null,
 
-    github: undefined,
+    github: "https://github.com/stratixtechnologies/workforce-pro",
+    repo: "Public",
+  },
+  {
+    id: 1,
+
+    title: "BookNest - A World of Books at Your Fingertips",
+
+    category: "Personal Project",
+
+    status: "completed",
+
+    image: "/assets/images/projects/book-nest.png",
+
+    description:
+      "A premium online bookstore platform featuring book discovery, authentication, shopping functionality, and an intuitive admin dashboard with a modern, responsive user experience.",
+
+    role: [
+      "Full Stack Development",
+      "Frontend Development",
+      "Backend Development",
+      "Database Design",
+      "Authentication Implementation",
+      "UI/UX Design",
+      "Deployment & Maintenance",
+    ],
+
+    tech: [
+      "Next.js",
+      "React.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Redux Toolkit",
+      "Cloudinary",
+      "Vercel",
+      "MongoDB Atlas",
+    ],
+
+    features: [
+      "Premium Book Store Interface",
+      "Book Search & Filtering",
+      "Book Categories & Collections",
+      "User Authentication",
+      "Shopping Cart & Wishlist",
+      "Order Management System",
+      "Admin Dashboard",
+      "Responsive Design",
+      "SEO Optimization",
+      "Featured & Trending Books",
+    ],
+    repo: "Public",
+
+    live: "https://booknest-tsd.vercel.app/",
+
+    github: "https://github.com/theshahzaib-dev/booknest",
   },
   {
     id: 2,
-
-    title: "Velocity Admin Dashboard",
-
-    category: "Private Client Project",
-
-    status: "private",
-
-    image: "/assets/images/projects/velocity.png",
+    title: "CallerLens - Caller Intelligence Dashboard",
+    category: "Personal Project",
+    status: "Completed",
+    repo: "Public",
+    image: "/assets/images/projects/callerlens.png",
 
     description:
-      "Developed the administrator dashboard for a logistics management platform. The dashboard provides administrators with complete control over users, vehicles, bookings and system analytics.",
+      "Developed a modern caller intelligence dashboard that allows users to search caller history, check spam scores, and report suspicious phone numbers. Built with Next.js and TypeScript using interactive analytics and responsive dashboard components.",
 
     role: [
-      "Built the complete Admin Dashboard",
-      "REST API Integration",
-      "Authentication",
+      "Frontend Development",
+      "Dashboard UI",
+      "Data Visualization",
+      "Responsive Design",
+    ],
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
+
+    features: [
+      "Caller Search",
+      "Spam Checker",
+      "Spam Reporting",
       "Dashboard Analytics",
       "Responsive UI",
     ],
 
-    tech: [
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "MongoDB Atlas",
-      "JWT",
-      "Vercel",
-    ],
-
-    features: [
-      "Dashboard Analytics",
-      "Bookings",
-      "Vehicles",
-      "Users",
-      "Authentication",
-    ],
-
-    live: "https://velocitydispatch.vercel.app/",
-
-    github: undefined,
+    live: "https://v0-callerlens.vercel.app/",
+    github: "https://github.com/stratixtechnologies/CallerLens",
   },
-
   {
     id: 3,
+    title: "PhotoFusion - AI Photo Editor",
+    category: "Personal Project",
+    status: "Completed",
+    repo: "Public",
+    image: "/assets/images/projects/photofusion.png",
+
+    description:
+      "A modern web-based photo editor built with Next.js and TypeScript. Users can upload images and perform editing operations through a clean and responsive interface with real-time preview.",
+
+    role: [
+      "Frontend Development",
+      "UI Development",
+      "State Management",
+      "Responsive Design",
+    ],
+
+    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    features: [
+      "Image Upload",
+      "Photo Editing",
+      "Real-time Preview",
+      "Responsive Design",
+    ],
+
+    live: undefined,
+    github: "https://github.com/stratixtechnologies/PhotoFusion",
+  },
+  {
+    id: 4,
 
     title: "Government Graduate College Lodhran",
 
     category: "Official Website",
 
-    status: "live",
+    status: "Completed",
+    repo: "Private",
 
     image: "/assets/images/projects/ggcl.png",
 
@@ -243,89 +201,58 @@ export const otherProjects = [
 
     live: "https://ggclodhran.edu.pk/",
 
-    github: "",
-  },
-  {
-    id: 4,
-    title: "BedSpace",
-    category: "Hotel Booking Platform",
-    image: "/assets/images/projects/bedspace.png",
-
-    description:
-      "A modern multi-page hotel and bed space booking website for UAE accommodations. Users can browse available rooms, choose options for individuals, couples, or families, and complete their booking before arriving. Built as a fully responsive frontend application with a clean user experience.",
-
-    tech: ["React", "Next.js", "Tailwind CSS"],
-
-    status: "Live",
-    repo: "Public",
-    live: "https://bedspace.vercel.app/",
-    github: "https://github.com/theshahzaib-dev/bedspace.git",
+    github: undefined,
   },
   {
     id: 5,
-    title: "Solution Carrier",
-    category: "Software Company Website",
-    image: "/assets/images/projects/sc.png",
+
+    title: "Velocity Admin Dashboard",
+
+    category: "Personal Project",
+
+    status: "Completed",
+    repo: "Public",
+
+    image: "/assets/images/projects/velocity.png",
 
     description:
-      "Developed the responsive frontend website for Solution Carrier, a software company focused on delivering digital solutions and technology services. Built with Next.js and Tailwind CSS, the website features modern UI components, optimized performance, and a responsive user experience across all devices.",
+      "Developed the administrator dashboard for a logistics management platform. The dashboard provides administrators with complete control over users, vehicles, bookings and system analytics.",
 
-    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+    role: [
+      "Built the complete Admin Dashboard",
+      "REST API Integration",
+      "Authentication",
+      "Dashboard Analytics",
+      "Responsive UI",
+    ],
 
-    status: "Live",
-    repo: "Private",
-    live: "https://solution-carriers.vercel.app/",
-    github: null,
+    tech: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "MongoDB Atlas",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Dashboard Analytics",
+      "Bookings",
+      "Vehicles",
+      "Users",
+      "Authentication",
+    ],
+
+    live: "https://velocitydispatch.vercel.app/",
+
+    github: "https://github.com/theshahzaib-dev/velocity-dispatch-center",
   },
   {
     id: 6,
-    title: "Stratix Technologies",
-    category: "Software House Website",
-    image: "/assets/images/projects/stratix.png",
-
-    description:
-      "A responsive multi-page hotel booking website for UAE accommodations. Users can browse available rooms, explore accommodation options for individuals, couples, and families, and complete booking requests through a modern and intuitive interface. Built as a frontend application using Next.js and Tailwind CSS.",
-    tech: ["Next.js", "React", "Tailwind CSS"],
-
-    status: "Live",
-    repo: "Private",
-    live: "https://stratixtechnologies.vercel.app/",
-    github: null, // Private repository
-  },
-  {
-    id: 7,
-    title: "Diverge AI",
-    category: "AI Land7ing Page",
-    image: "/assets/images/projects/diverge-ai.png",
-
-    description:
-      "Worked as the Frontend Developer to build the official website for Solution Carrier. Developed responsive pages and reusable UI components using Next.js, React, JavaScript, and Tailwind CSS, with deployment on Vercel.",
-    tech: ["React", "Next.js", "Tailwind CSS"],
-
-    status: "Live",
-    repo: "Public",
-    live: "https://diverge-ai.vercel.app/",
-    github: "https://github.com/theshahzaib-dev/diverge-ai.git", // Private repository
-  },
-  {
-    id: 8,
-    title: "LogranGPT",
-    category: "AI Platform",
-    image: "/assets/images/projects/lodhrangpt.png",
-
-    description:
-      "Designed and developed the frontend website for Stratix Technologies, showcasing the company's services, technologies, portfolio, and business information through a modern, responsive interface.",
-    tech: ["Next.js", "React", "Tailwind CSS", "Firebase", "Hugging Face"],
-
-    status: "Live",
-    repo: "Private",
-    live: "https://lodhrangpt.vercel.app/",
-  },
-  {
-    id: 9,
-    title: "ClickDesire",
+    title: "Click Desire",
     category: "E-Commerce Platform",
-    status: "private",
+    status: "Completedd",
+    repo: "Private",
     image: "/assets/images/projects/clickdesire.png",
     description:
       "Worked as the Backend Developer for a complete e-commerce platform. Developed scalable REST APIs, authentication, product management, order processing, and database architecture using Node.js, Express.js, and MongoDB.",
@@ -352,10 +279,56 @@ export const otherProjects = [
     github: undefined,
   },
   {
+    id: 7,
+    title: "BedSpace",
+    category: "Hotel Booking Platform",
+    image: "/assets/images/projects/bedspace.png",
+
+    description:
+      "A modern multi-page hotel and bed space booking website for UAE accommodations. Users can browse available rooms, choose options for individuals, couples, or families, and complete their booking before arriving. Built as a fully responsive frontend application with a clean user experience.",
+
+    tech: ["React", "Next.js", "Tailwind CSS"],
+
+    status: "Completed",
+    repo: "Public",
+    live: "https://bedspace.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/bedspace",
+  },
+  {
+    id: 8,
+    title: "Solution Carrier",
+    category: "Software Company Website",
+    image: "/assets/images/projects/sc.png",
+
+    description:
+      "Developed the responsive frontend website for Solution Carrier, a software company focused on delivering digital solutions and technology services. Built with Next.js and Tailwind CSS, the website features modern UI components, optimized performance, and a responsive user experience across all devices.",
+
+    tech: ["Next.js", "React", "Tailwind CSS", "Vercel"],
+
+    status: "Completed",
+    repo: "Private",
+    live: "https://solution-carriers.vercel.app/",
+    github: null,
+  },
+  {
+    id: 9,
+    title: "LogranGPT",
+    category: "AI Platform",
+    image: "/assets/images/projects/lodhrangpt.png",
+
+    description:
+      "Designed and developed the frontend website for Stratix Technologies, showcasing the company's services, technologies, portfolio, and business information through a modern, responsive interface.",
+    tech: ["Next.js", "React", "Tailwind CSS", "Firebase", "Hugging Face"],
+
+    status: "Completed",
+    repo: "Private",
+    live: "https://lodhrangpt.vercel.app/",
+  },
+  {
     id: 10,
     title: "Rzana",
     category: "Business Service Platform",
-    status: "private",
+    status: "Completed",
     image: "/assets/images/projects/rzana.png",
 
     description:
@@ -392,60 +365,82 @@ export const otherProjects = [
   },
   {
     id: 11,
-    title: "CallerLens",
-    category: "Caller Intelligence Dashboard",
-    status: "live",
-    image: "/assets/images/projects/callerlens.png",
+    title: "Diverge AI",
+    category: "AI Land7ing Page",
+    image: "/assets/images/projects/diverge-ai.png",
 
     description:
-      "Developed a modern caller intelligence dashboard that allows users to search caller history, check spam scores, and report suspicious phone numbers. Built with Next.js and TypeScript using interactive analytics and responsive dashboard components.",
+      "Worked as the Frontend Developer to build the official website for Solution Carrier. Developed responsive pages and reusable UI components using Next.js, React, JavaScript, and Tailwind CSS, with deployment on Vercel.",
+    tech: ["React", "Next.js", "Tailwind CSS"],
 
-    role: [
-      "Frontend Development",
-      "Dashboard UI",
-      "Data Visualization",
-      "Responsive Design",
-    ],
-
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
-
-    features: [
-      "Caller Search",
-      "Spam Checker",
-      "Spam Reporting",
-      "Dashboard Analytics",
-      "Responsive UI",
-    ],
-
-    live: undefined,
+    status: "Completed",
+    repo: "Public",
+    live: "https://diverge-ai.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/diverge-ai"
   },
   {
     id: 12,
-    title: "PhotoFusion",
-    category: "AI Photo Editor",
-    status: "live",
-    image: "/assets/images/projects/photofusion.png",
+    title: "Stratix Technologies",
+    category: "Software House Website",
+    image: "/assets/images/projects/stratix.png",
 
     description:
-      "A modern web-based photo editor built with Next.js and TypeScript. Users can upload images and perform editing operations through a clean and responsive interface with real-time preview.",
+      "A responsive multi-page hotel booking website for UAE accommodations. Users can browse available rooms, explore accommodation options for individuals, couples, and families, and complete booking requests through a modern and intuitive interface. Built as a frontend application using Next.js and Tailwind CSS.",
+    tech: ["Next.js", "React", "Tailwind CSS"],
+
+    status: "Completed",
+    repo: "Public",
+    live: "https://stratixtechnologies.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/stratixtechnologies",
+  },
+  
+
+  {
+    id: 13,
+
+    title: "Arwa Technologies Company Website",
+
+    category: "Professional Experience",
+
+    status: "Completed",
+    repo: "Private",
+
+    image: "/assets/images/projects/arwa-technologies.png",
+
+    description:
+      "Designed and developed key frontend modules for the Arwa Technologies website, focusing on responsive UI, API integration, and seamless user experience.",
 
     role: [
       "Frontend Development",
-      "UI Development",
-      "State Management",
-      "Responsive Design",
+      "REST API Integration",
+      "Authentication",
+      "Responsive UI Development",
+      "Team Collaboration",
     ],
 
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+    tech: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Vercel",
+    ],
 
     features: [
-      "Image Upload",
-      "Photo Editing",
-      "Real-time Preview",
+      "Company Profile",
+      "Team Members",
+      "Career Section",
+      "Authentication",
       "Responsive Design",
+      "REST API Integration",
     ],
 
     live: undefined,
+
+    github: undefined,
   },
 ];
 

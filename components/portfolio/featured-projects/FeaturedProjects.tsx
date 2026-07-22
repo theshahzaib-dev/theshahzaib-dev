@@ -81,10 +81,7 @@ export default function FeaturedProjects({
             const active = index === current;
 
             return (
-              <CarouselItem
-                key={project.id}
-                className="lg:basis-1/2"
-              >
+              <CarouselItem key={project.id} className="lg:basis-1/2">
                 <motion.div
                   animate={{
                     scale: active ? 1 : 0.9,
@@ -109,14 +106,25 @@ export default function FeaturedProjects({
                       />
                     </div>
 
-                    <div className="space-y-5 p-6">
-                      <div>
-                        <h3 className="text-xl font-semibold truncate">
-                          {project.title}
-                        </h3>
-                        <span className="text-sm font-medium text-primary">
-                          {project.category}
-                        </span>
+                    <div className="space-y-5 p-6 w-full">
+                      <div className="grid lg:grid-cols-2 justify-between">
+                        <div>
+                          <h3 className="text-xl font-semibold">
+                            {project.title}
+                          </h3>
+                          <span className="text-sm font-medium text-primary">
+                            {project.category}
+                          </span>
+                        </div>
+                        {project.live ? (
+                          <Link href={project.live}>
+                            <ExternalLink className=" p-2 ml-auto rounded-md bg-primary h-auto w-auto text-5xl" />
+                          </Link>
+                        ) : (
+                          <span className="cursor-not-allowed opacity-50 ml-auto">
+                            <ExternalLink className="mr-2 p-2 rounded-md bg-primary h-auto w-auto text-5xl" />
+                          </span>
+                        )}
                       </div>
                     </div>
                   </Card>

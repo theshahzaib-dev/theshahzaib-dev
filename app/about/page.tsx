@@ -16,13 +16,13 @@ const sectionVariant: Variants = {
   },
 };
 
-const testimonials = [
+export const testimonials = [
   {
     name: "Prof. Mr. Muhammad Irfan Yasir",
-    role: "Principal, Government Graduate College Lodhran",
-    avatar: "/assets/images/testimonials/principal.png", // Optional
+    role: "Principal, Govt. Graduate College Lodhran",
+    avatar: "/assets/images/testimonials/principal.png",
     quote:
-      "Shahzaib developed the official website for our college with exceptional dedication and professionalism. The quality of his work is comparable to projects that often command a high commercial value. Although this was a contribution to our institution, we proudly recognized his efforts with a token of appreciation.",
+      "Shahzaib developed our official college website with professionalism and dedication. His technical skills, reliability, and commitment resulted in a polished and valuable platform.",
     highlight: "Official Website Project",
   },
   {
@@ -30,15 +30,15 @@ const testimonials = [
     role: "Freelance Client",
     avatar: "/assets/images/testimonials/sarfraz.svg",
     quote:
-      "Shahzaib delivered a modern, responsive website that matched our requirements and branding. Throughout the project, he communicated clearly, addressed feedback quickly, and maintained a professional approach. His attention to detail and commitment to quality made the collaboration smooth and successful.",
+      "Shahzaib built a modern, responsive website that met our expectations. He communicated clearly, implemented feedback promptly, and consistently delivered high-quality work.",
     highlight: "Frontend Development",
   },
   {
     name: "Mr. Azhar Shahzad",
-    role: "Arwa Tchnologies",
-    avatar: "/assets/images/testimonials/azhar.png", // Optional
+    role: "Arwa Technologies",
+    avatar: "/assets/images/testimonials/azhar.png",
     quote:
-      "During his internship, Shahzaib showed excellent dedication, quickly adapted to new technologies, and consistently delivered quality work while collaborating effectively with the development team.",
+      "During his internship, Shahzaib adapted quickly, collaborated effectively, and consistently delivered quality solutions. His professionalism and eagerness to learn stood out.",
     highlight: "Job Performance & Collaboration",
   },
 ];
