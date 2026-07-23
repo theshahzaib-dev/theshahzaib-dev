@@ -118,11 +118,11 @@ export default function FeaturedProjects({
                         </div>
                         {project.live ? (
                           <Link href={project.live}>
-                            <ExternalLink className=" p-2 ml-auto rounded-md bg-primary h-auto w-auto text-5xl" />
+                            <ExternalLink className=" p-2 ml-auto rounded-md bg-primary text-white h-auto w-auto text-5xl" />
                           </Link>
                         ) : (
                           <span className="cursor-not-allowed opacity-50 ml-auto">
-                            <ExternalLink className="mr-2 p-2 rounded-md bg-primary h-auto w-auto text-5xl" />
+                            <ExternalLink className="mr-2 p-2 rounded-md text-white bg-primary h-auto w-auto text-5xl" />
                           </span>
                         )}
                       </div>
