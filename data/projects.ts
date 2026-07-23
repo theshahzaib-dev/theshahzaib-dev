@@ -55,7 +55,61 @@ export const otherProjects = [
     repo: "Public",
   },
   {
-    id: 1,
+  id: 1,
+
+  title: "ScanGPT – AI-Powered OCR & Document Intelligence",
+
+  category: "Personal Project",
+
+  status: "completed",
+
+  image: "/assets/images/projects/scangpt.png",
+
+  description:
+    "A modern AI-powered document processing platform that extracts text from images and scanned documents using OCR, then leverages AI to summarize, translate, and analyze content through a fast, intuitive, and responsive user experience.",
+
+  role: [
+    "Frontend Development",
+    "UI/UX Design",
+    "Component Architecture",
+    "Responsive Web Development",
+    "Performance Optimization",
+    "SEO Optimization",
+    "Deployment",
+  ],
+
+  tech: [
+    "Next.js 16",
+    "TypeScript",
+    "Tailwind CSS v4",
+    "shadcn/ui",
+    "Radix UI",
+    "Lucide React",
+    "Vercel Analytics",
+    "Vercel",
+  ],
+
+  features: [
+    "AI-Powered OCR Text Extraction",
+    "AI Document Summarization",
+    "Multi-Language Text Processing",
+    "Editable Extracted Text",
+    "PDF Export",
+    "Drag & Drop File Upload",
+    "Responsive SaaS Landing Page",
+    "Modern UI Components",
+    "SEO-Friendly Architecture",
+    "Fast Performance & Optimized UX",
+  ],
+
+  repo: "Public",
+
+  live: "https://your-live-demo.vercel.app",
+
+  github: "https://github.com/theshahzaib-dev/scangpt",
+},
+  {
+    id: 2,
 
     title: "BookNest - A World of Books at Your Fingertips",
 
@@ -111,7 +165,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/booknest",
   },
   {
-    id: 2,
+    id: 3,
     title: "CallerLens - Caller Intelligence Dashboard",
     category: "Personal Project",
     status: "Completed",
@@ -142,7 +196,7 @@ export const otherProjects = [
     github: "https://github.com/stratixtechnologies/CallerLens",
   },
   {
-    id: 3,
+    id: 4,
     title: "PhotoFusion - AI Photo Editor",
     category: "Personal Project",
     status: "Completed",
@@ -172,7 +226,7 @@ export const otherProjects = [
     github: "https://github.com/stratixtechnologies/PhotoFusion",
   },
   {
-    id: 4,
+    id: 5,
 
     title: "Government Graduate College Lodhran",
 
@@ -204,7 +258,7 @@ export const otherProjects = [
     github: undefined,
   },
   {
-    id: 5,
+    id: 6,
 
     title: "Velocity Admin Dashboard",
 
@@ -248,7 +302,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/velocity-dispatch-center",
   },
   {
-    id: 6,
+    id: 7,
     title: "Click Desire",
     category: "E-Commerce Platform",
     status: "Completedd",
@@ -279,7 +333,7 @@ export const otherProjects = [
     github: undefined,
   },
   {
-    id: 7,
+    id: 8,
     title: "BedSpace",
     category: "Hotel Booking Platform",
     image: "/assets/images/projects/bedspace.png",
@@ -295,7 +349,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/bedspace",
   },
   {
-    id: 8,
+    id: 9,
     title: "Solution Carrier",
     category: "Software Company Website",
     image: "/assets/images/projects/sc.png",
@@ -311,7 +365,7 @@ export const otherProjects = [
     github: null,
   },
   {
-    id: 9,
+    id: 10,
     title: "LogranGPT",
     category: "AI Platform",
     image: "/assets/images/projects/lodhrangpt.png",
@@ -325,7 +379,7 @@ export const otherProjects = [
     live: "https://lodhrangpt.vercel.app/",
   },
   {
-    id: 10,
+    id: 11,
     title: "Rzana",
     category: "Business Service Platform",
     status: "Completed",
@@ -364,7 +418,7 @@ export const otherProjects = [
     live: undefined,
   },
   {
-    id: 11,
+    id: 12,
     title: "Diverge AI",
     category: "AI Land7ing Page",
     image: "/assets/images/projects/diverge-ai.png",
@@ -379,7 +433,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/diverge-ai"
   },
   {
-    id: 12,
+    id: 13,
     title: "Stratix Technologies",
     category: "Software House Website",
     image: "/assets/images/projects/stratix.png",
@@ -393,10 +447,8 @@ export const otherProjects = [
     live: "https://stratixtechnologies.vercel.app/",
     github: "https://github.com/theshahzaib-dev/stratixtechnologies",
   },
-  
-
   {
-    id: 13,
+    id: 15,
 
     title: "Arwa Technologies Company Website",
 
