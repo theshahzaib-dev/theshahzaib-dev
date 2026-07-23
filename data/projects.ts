@@ -104,7 +104,7 @@ export const otherProjects = [
 
   repo: "Public",
 
-  live: "https://your-live-demo.vercel.app",
+  live: "https://scangpt-tsd.vercel.app",
 
   github: "https://github.com/theshahzaib-dev/scangpt",
 },
