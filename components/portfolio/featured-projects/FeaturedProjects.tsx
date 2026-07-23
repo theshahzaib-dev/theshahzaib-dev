@@ -117,7 +117,7 @@ export default function FeaturedProjects({
                           </span>
                         </div>
                         {project.live ? (
-                          <Link href={project.live}>
+                          <Link target="_blank" href={project.live}>
                             <ExternalLink className=" p-2 ml-auto rounded-md bg-primary text-white h-auto w-auto text-5xl" />
                           </Link>
                         ) : (
