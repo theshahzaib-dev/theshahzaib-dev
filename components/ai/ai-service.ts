@@ -1,0 +1,17 @@
+export async function sendToGemini(message: string) {
+  const response = await fetch("/api/chat", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      message,
+    }),
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to contact AI.");
+  }
+
+  return response.json();
+}

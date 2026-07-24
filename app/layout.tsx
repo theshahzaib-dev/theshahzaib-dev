@@ -4,7 +4,8 @@ import "./globals.css";
 import { Providers } from "@/lib/providers";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
+import { AIProvider, AIButton, AIDrawer } from "@/components/ai";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,17 +105,22 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Providers>
-          {
-            process.env.ENVIREMENT === "production" && <Analytics/>
-          }
-          
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              <div className="container mx-auto px-6 py-8">{children}</div>
-            </main>
-            <Footer />
-          </div>
+          <AIProvider>
+            {process.env.ENVIREMENT === "production" && <Analytics />}
+
+            <div className="min-h-screen flex flex-col">
+              <Header />
+
+              <main className="flex-1">
+                <div className="container mx-auto px-6 py-8">{children}</div>
+              </main>
+
+              <Footer />
+
+              <AIButton />
+              <AIDrawer />
+            </div>
+          </AIProvider>
         </Providers>
       </body>
     </html>
