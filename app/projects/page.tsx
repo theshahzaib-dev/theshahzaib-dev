@@ -115,7 +115,7 @@ export default function ProjectsPage() {
       </motion.section>
 
       {/* Featured Projects */}
-      <FeaturedProjects />
+      <FeaturedProjects sectionVariant={sectionVariant} />
 
       {/* Other Projects */}
       <motion.section

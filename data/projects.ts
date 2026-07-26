@@ -49,7 +49,6 @@ export const featuredProjects = [
       "Responsive Admin Panel",
     ],
 
-    live: null,
 
     github: "https://github.com/stratixtechnologies/workforce-pro",
     repo: "Public",
@@ -213,8 +212,6 @@ export const featuredProjects = [
       "Responsive Design",
       "REST API Integration",
     ],
-
-    live: undefined,
 
     github: undefined,
   },
