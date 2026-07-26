@@ -65,6 +65,7 @@ export function AIProvider({ children }: { children: ReactNode }) {
     setMessages((prev) => [...prev, userMessage]);
 
     setIsTyping(true);
+    setTypingTxt("Thinking");
 
     try {
       const { reply } = await sendToGemini(text);
