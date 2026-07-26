@@ -1,4 +1,4 @@
-export const otherProjects = [
+export const featuredProjects = [
   {
     id: 0,
 
@@ -22,7 +22,7 @@ export const otherProjects = [
       "Dashboard & Analytics Development",
     ],
 
-    tech: [
+    technologies: [
       "React.js",
       "Next.js",
       "Tailwind CSS",
@@ -55,59 +55,173 @@ export const otherProjects = [
     repo: "Public",
   },
   {
-  id: 1,
+    id: 1,
 
-  title: "ScanGPT – AI-Powered OCR & Document Intelligence",
+    title: "ScanGPT – AI-Powered OCR & Document Intelligence",
 
-  category: "Personal Project",
+    category: "Personal Project",
 
-  status: "completed",
+    status: "completed",
 
-  image: "/assets/images/projects/scangpt.png",
+    image: "/assets/images/projects/scangpt.png",
 
-  description:
-    "A modern AI-powered document processing platform that extracts text from images and scanned documents using OCR, then leverages AI to summarize, translate, and analyze content through a fast, intuitive, and responsive user experience.",
+    description:
+      "A modern AI-powered document processing platform that extracts text from images and scanned documents using OCR, then leverages AI to summarize, translate, and analyze content through a fast, intuitive, and responsive user experience.",
 
-  role: [
-    "Frontend Development",
-    "UI/UX Design",
-    "Component Architecture",
-    "Responsive Web Development",
-    "Performance Optimization",
-    "SEO Optimization",
-    "Deployment",
-  ],
+    role: [
+      "Frontend Development",
+      "UI/UX Design",
+      "Component Architecture",
+      "Responsive Web Development",
+      "Performance Optimization",
+      "SEO Optimization",
+      "Deployment",
+    ],
 
-  tech: [
-    "Next.js 16",
-    "TypeScript",
-    "Tailwind CSS v4",
-    "shadcn/ui",
-    "Radix UI",
-    "Lucide React",
-    "Vercel Analytics",
-    "Vercel",
-  ],
+    technologies: [
+      "Next.js 16",
+      "TypeScript",
+      "Tailwind CSS v4",
+      "shadcn/ui",
+      "Radix UI",
+      "Lucide React",
+      "Vercel Analytics",
+      "Vercel",
+    ],
 
-  features: [
-    "AI-Powered OCR Text Extraction",
-    "AI Document Summarization",
-    "Multi-Language Text Processing",
-    "Editable Extracted Text",
-    "PDF Export",
-    "Drag & Drop File Upload",
-    "Responsive SaaS Landing Page",
-    "Modern UI Components",
-    "SEO-Friendly Architecture",
-    "Fast Performance & Optimized UX",
-  ],
+    features: [
+      "AI-Powered OCR Text Extraction",
+      "AI Document Summarization",
+      "Multi-Language Text Processing",
+      "Editable Extracted Text",
+      "PDF Export",
+      "Drag & Drop File Upload",
+      "Responsive SaaS Landing Page",
+      "Modern UI Components",
+      "SEO-Friendly Architecture",
+      "Fast Performance & Optimized UX",
+    ],
 
-  repo: "Public",
+    repo: "Public",
 
-  live: "https://scangpt-tsd.vercel.app",
+    live: "https://scangpt-tsd.vercel.app",
 
-  github: "https://github.com/theshahzaib-dev/scangpt",
-},
+    github: "https://github.com/theshahzaib-dev/scangpt",
+  },
+  {
+    id: 3,
+    title: "CallerLens - Caller Intelligence Dashboard",
+    category: "Personal Project",
+    status: "Completed",
+    repo: "Public",
+    image: "/assets/images/projects/callerlens.png",
+
+    description:
+      "Developed a modern caller intelligence dashboard that allows users to search caller history, check spam scores, and report suspicious phone numbers. Built with Next.js and TypeScript using interactive analytics and responsive dashboard components.",
+
+    role: [
+      "Frontend Development",
+      "Dashboard UI",
+      "Data Visualization",
+      "Responsive Design",
+    ],
+
+    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
+
+    features: [
+      "Caller Search",
+      "Spam Checker",
+      "Spam Reporting",
+      "Dashboard Analytics",
+      "Responsive UI",
+    ],
+
+    live: "https://v0-callerlens.vercel.app/",
+    github: "https://github.com/stratixtechnologies/CallerLens",
+  },
+ 
+  {
+    id: 7,
+    title: "Click Desire",
+    category: "E-Commerce Platform",
+    status: "Completedd",
+    repo: "Private",
+    image: "/assets/images/projects/clickdesire.png",
+    description:
+      "Worked as the Backend Developer for a complete e-commerce platform. Developed scalable REST APIs, authentication, product management, order processing, and database architecture using Node.js, Express.js, and MongoDB.",
+    role: [
+      "Backend Development",
+      "REST API Development",
+      "Authentication",
+      "Database Design",
+      "API Integration",
+    ],
+
+    technologies: ["Node.js", "Express.js", "MongoDB", "JWT", "Mongoose"],
+
+    features: [
+      "Authentication",
+      "Products",
+      "Categories",
+      "Orders",
+      "Shopping Cart",
+      "REST APIs",
+    ],
+
+    live: undefined,
+    github: undefined,
+  },
+  {
+    id: 15,
+
+    title: "Arwa Technologies Company Website",
+
+    category: "Professional Experience",
+
+    status: "Completed",
+    repo: "Private",
+
+    image: "/assets/images/projects/arwa-technologies.png",
+
+    description:
+      "Designed and developed key frontend modules for the Arwa Technologies website, focusing on responsive UI, API integration, and seamless user experience.",
+
+    role: [
+      "Frontend Development",
+      "REST API Integration",
+      "Authentication",
+      "Responsive UI Development",
+      "Team Collaboration",
+    ],
+
+    technologies: [
+      "React.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Company Profile",
+      "Team Members",
+      "Career Section",
+      "Authentication",
+      "Responsive Design",
+      "REST API Integration",
+    ],
+
+    live: undefined,
+
+    github: undefined,
+  },
+];
+
+export const otherProjects = [
+  
   {
     id: 2,
 
@@ -163,37 +277,6 @@ export const otherProjects = [
     live: "https://booknest-tsd.vercel.app/",
 
     github: "https://github.com/theshahzaib-dev/booknest",
-  },
-  {
-    id: 3,
-    title: "CallerLens - Caller Intelligence Dashboard",
-    category: "Personal Project",
-    status: "Completed",
-    repo: "Public",
-    image: "/assets/images/projects/callerlens.png",
-
-    description:
-      "Developed a modern caller intelligence dashboard that allows users to search caller history, check spam scores, and report suspicious phone numbers. Built with Next.js and TypeScript using interactive analytics and responsive dashboard components.",
-
-    role: [
-      "Frontend Development",
-      "Dashboard UI",
-      "Data Visualization",
-      "Responsive Design",
-    ],
-
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
-
-    features: [
-      "Caller Search",
-      "Spam Checker",
-      "Spam Reporting",
-      "Dashboard Analytics",
-      "Responsive UI",
-    ],
-
-    live: "https://v0-callerlens.vercel.app/",
-    github: "https://github.com/stratixtechnologies/CallerLens",
   },
   {
     id: 4,
@@ -302,37 +385,6 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/velocity-dispatch-center",
   },
   {
-    id: 7,
-    title: "Click Desire",
-    category: "E-Commerce Platform",
-    status: "Completedd",
-    repo: "Private",
-    image: "/assets/images/projects/clickdesire.png",
-    description:
-      "Worked as the Backend Developer for a complete e-commerce platform. Developed scalable REST APIs, authentication, product management, order processing, and database architecture using Node.js, Express.js, and MongoDB.",
-    role: [
-      "Backend Development",
-      "REST API Development",
-      "Authentication",
-      "Database Design",
-      "API Integration",
-    ],
-
-    tech: ["Node.js", "Express.js", "MongoDB", "JWT", "Mongoose"],
-
-    features: [
-      "Authentication",
-      "Products",
-      "Categories",
-      "Orders",
-      "Shopping Cart",
-      "REST APIs",
-    ],
-
-    live: undefined,
-    github: undefined,
-  },
-  {
     id: 8,
     title: "BedSpace",
     category: "Hotel Booking Platform",
@@ -430,7 +482,7 @@ export const otherProjects = [
     status: "Completed",
     repo: "Public",
     live: "https://diverge-ai.vercel.app/",
-    github: "https://github.com/theshahzaib-dev/diverge-ai"
+    github: "https://github.com/theshahzaib-dev/diverge-ai",
   },
   {
     id: 13,
@@ -446,53 +498,6 @@ export const otherProjects = [
     repo: "Public",
     live: "https://stratixtechnologies.vercel.app/",
     github: "https://github.com/theshahzaib-dev/stratixtechnologies",
-  },
-  {
-    id: 15,
-
-    title: "Arwa Technologies Company Website",
-
-    category: "Professional Experience",
-
-    status: "Completed",
-    repo: "Private",
-
-    image: "/assets/images/projects/arwa-technologies.png",
-
-    description:
-      "Designed and developed key frontend modules for the Arwa Technologies website, focusing on responsive UI, API integration, and seamless user experience.",
-
-    role: [
-      "Frontend Development",
-      "REST API Integration",
-      "Authentication",
-      "Responsive UI Development",
-      "Team Collaboration",
-    ],
-
-    tech: [
-      "React.js",
-      "Next.js",
-      "Tailwind CSS",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
-      "JWT",
-      "Vercel",
-    ],
-
-    features: [
-      "Company Profile",
-      "Team Members",
-      "Career Section",
-      "Authentication",
-      "Responsive Design",
-      "REST API Integration",
-    ],
-
-    live: undefined,
-
-    github: undefined,
   },
 ];
 

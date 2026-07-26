@@ -1,8 +1,9 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import Link from "next/link";
+
+import { motion, LayoutGroup } from "framer-motion";
+
 import {
   Carousel,
   CarouselContent,
@@ -11,18 +12,21 @@ import {
   CarouselPrevious,
   type CarouselApi,
 } from "@/components/ui/carousel";
+
 import Autoplay from "embla-carousel-autoplay";
 
-import { otherProjects } from "@/data/projects";
+import Link from "next/link";
+
 import TitleSection from "@/components/TitleSection";
-import { ExternalLink, Github } from "lucide-react";
-import Image from "next/image";
-import { Card } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+
+import { featuredProjects } from "@/data/projects";
+
+import InteractiveProjectCard from "./InteractiveProjectCard";
+import ProjectModal from "./ProjectModal";
 
 interface FeaturedProjectsProps {
   sectionVariant: any;
-  buttonShow: boolean;
+  buttonShow?: boolean;
 }
 
 export default function FeaturedProjects({
@@ -30,7 +34,10 @@ export default function FeaturedProjects({
   buttonShow = false,
 }: FeaturedProjectsProps) {
   const [api, setApi] = React.useState<CarouselApi>();
+
   const [current, setCurrent] = React.useState(0);
+
+  const [selectedProject, setSelectedProject] = React.useState<any>(null);
 
   React.useEffect(() => {
     if (!api) return;
@@ -41,112 +48,118 @@ export default function FeaturedProjects({
       setCurrent(api.selectedScrollSnap());
     });
   }, [api]);
-  return (
-    <motion.section
-      className="space-y-10"
-      variants={sectionVariant}
-      initial="hidden"
-      animate="visible"
-    >
-      {/* Heading */}
 
-      <div className="">
+  return (
+    <LayoutGroup>
+      <motion.section
+        variants={sectionVariant}
+        initial="hidden"
+        animate="visible"
+        className="space-y-14"
+      >
+        {/* Heading */}
+
         <TitleSection
           sectionVariant={sectionVariant}
           title="Turning ideas into real-world web applications."
           subTitle="🚀 Featured Projects"
-          description="A collection of personal, academic, and client projects showcasing my experience building responsive user interfaces, secure backend systems, and production-ready web applications."
+          description="A collection of personal, academic and client projects showcasing modern frontend, backend and full-stack development."
         />
-      </div>
 
-      {/* Slider */}
+        {/* Carousel */}
 
-      <Carousel
-        setApi={setApi}
-        opts={{
-          align: "center",
-          loop: true,
-        }}
-        plugins={[
-          Autoplay({
-            delay: 3000,
-            stopOnInteraction: false,
-            stopOnMouseEnter: true,
-          }),
-        ]}
-        className="w-full p-3"
-      >
-        <CarouselContent className="ml-2 p-10">
-          {otherProjects.map((project, index) => {
-            const active = index === current;
+        <Carousel
+          setApi={setApi}
+          opts={{
+            align: "center",
+            loop: true,
+          }}
+          plugins={[
+            Autoplay({
+              delay: 2000,
+              stopOnInteraction: false,
+              stopOnMouseEnter: true,
+            }),
+          ]}
+          className="w-full"
+        >
+          <CarouselContent className="pt-10">
+            {featuredProjects.map((project, index) => {
+              const active = current === index;
 
-            return (
-              <CarouselItem key={project.id} className="lg:basis-1/2">
-                <motion.div
-                  animate={{
-                    scale: active ? 1 : 0.9,
-                    opacity: active ? 1 : 0.45,
-                    y: active ? -8 : 0,
-                  }}
-                  transition={{
-                    duration: 0.45,
-                  }}
-                  className={`
-                  rounded-lg transition-all duration-500
-                  ${active ? "shadow-2xl shadow-primary/30 z-20" : "shadow-md"}
-                `}
+              return (
+                <CarouselItem
+                  key={project.id}
+                  className="
+                    md:basis-1/2
+                    xl:basis-1/2
+                  "
                 >
-                  <Card className="pt-0 h-full border-border/60 hover:border-primary transition">
-                    <div className="relative min-h-80 h-auto w-full">
-                      <Image
-                        src={project.image}
-                        alt={project.title}
-                        fill
-                        className="object-cover w-full h-full"
-                      />
-                    </div>
+                  <motion.div
+                    animate={{
+                      scale: active ? 1 : 0.92,
+                      opacity: active ? 1 : 0.45,
+                      filter: active ? "blur(0px)" : "blur(2px)",
+                    }}
+                    transition={{
+                      duration: 0.45,
+                    }}
+                    className="px-4"
+                  >
+                    <InteractiveProjectCard
+                      project={project}
+                      active={active}
+                      onClick={() => setSelectedProject(project)}
+                    />
+                  </motion.div>
+                </CarouselItem>
+              );
+            })}
+          </CarouselContent>
+        </Carousel>
 
-                    <div className="space-y-5 p-6 w-full">
-                      <div className="grid space-y-3 lg:grid-cols-2 justify-between">
-                        <div>
-                          <h3 className="text-xl font-semibold">
-                            {project.title}
-                          </h3>
-                          <span className="text-sm font-medium text-primary">
-                            {project.category}
-                          </span>
-                        </div>
-                        {project.live ? (
-                          <Link target="_blank" href={project.live}>
-                            <ExternalLink className=" p-2 ml-auto rounded-md bg-primary text-white h-auto w-auto text-5xl" />
-                          </Link>
-                        ) : (
-                          <span className="cursor-not-allowed opacity-50 ml-auto">
-                            <ExternalLink className="mr-2 p-2 rounded-md text-white bg-primary h-auto w-auto text-5xl" />
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  </Card>
-                </motion.div>
-              </CarouselItem>
-            );
-          })}
-        </CarouselContent>
+        {/* View All */}
 
-        <div className="mt-8 flex justify-center gap-4">
-          <CarouselPrevious className="static translate-y-0" />
-          <CarouselNext className="static translate-y-0" />
-        </div>
-      </Carousel>
+        {buttonShow && (
+          <motion.div
+            initial={{
+              opacity: 0,
+              y: 15,
+            }}
+            animate={{
+              opacity: 1,
+              y: 0,
+            }}
+            transition={{
+              delay: 0.4,
+            }}
+            className="flex justify-center"
+          >
+            <Link
+              href="/projects"
+              className="
+                rounded-full
+                border
+                px-8
+                pb-3
+                font-medium
+                transition
+                hover:bg-primary
+                hover:text-primary-foreground
+              "
+            >
+              View All Projects
+            </Link>
+          </motion.div>
+        )}
+        {/* Shared Layout Modal */}
 
-      {buttonShow && (
-        <div className="flex justify-center align-center">
-          <Link className="text-primary w-full text-center" href="/projects">
-            View All Projects
-          </Link>
-        </div>
-      )}
-    </motion.section>
+        <ProjectModal
+          open={!!selectedProject}
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      </motion.section>
+    </LayoutGroup>
   );
 }

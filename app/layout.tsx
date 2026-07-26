@@ -6,6 +6,7 @@ import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { Analytics } from "@vercel/analytics/next";
 import { AIProvider, AIButton, AIDrawer } from "@/components/ai";
+import CustomCursor from "@/components/cursor/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -104,6 +105,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CustomCursor />
         <Providers>
           <AIProvider>
             {process.env.ENVIREMENT === "production" && <Analytics />}

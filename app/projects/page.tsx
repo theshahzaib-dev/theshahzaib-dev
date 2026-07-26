@@ -7,10 +7,7 @@ import { ExternalLink, Github } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { useEffect, useState } from "react";
-import {
-  developmentProcess,
-  otherProjects,
-} from "@/data/projects";
+import { developmentProcess, otherProjects } from "@/data/projects";
 import FeaturedProjects from "@/components/portfolio/featured-projects/FeaturedProjects";
 import { stats } from "@/data/stats";
 import TitleSection from "@/components/TitleSection";
@@ -117,6 +114,9 @@ export default function ProjectsPage() {
         </div>
       </motion.section>
 
+      {/* Featured Projects */}
+      <FeaturedProjects />
+
       {/* Other Projects */}
       <motion.section
         className="space-y-10"
@@ -216,12 +216,21 @@ export default function ProjectsPage() {
         </div>
         <div className="mt-12 flex justify-center">
           {visibleProjects < otherProjects.length ? (
-            <Button className="cursor-pointer" size="lg" onClick={handleViewMore}>
+            <Button
+              className="cursor-pointer"
+              size="lg"
+              onClick={handleViewMore}
+            >
               View More
             </Button>
           ) : (
             otherProjects.length > (isLargeScreen ? 6 : 4) && (
-              <Button variant="outline" className="cursor-pointer" size="lg" onClick={handleShowLess}>
+              <Button
+                variant="outline"
+                className="cursor-pointer"
+                size="lg"
+                onClick={handleShowLess}
+              >
                 Show Less
               </Button>
             )

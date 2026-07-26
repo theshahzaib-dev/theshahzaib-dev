@@ -121,6 +121,28 @@
   --sidebar-ring: #04aeef;
 }
 
+html,
+body {
+  cursor: none;
+}
+
+html,
+body {
+  cursor: none;
+}
+
+a,
+button,
+input,
+textarea,
+select,
+label,
+summary,
+[role="button"],
+.cursor-pointer {
+  cursor: none !important;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
