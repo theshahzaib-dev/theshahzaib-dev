@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import Link from "next/link";
@@ -19,6 +19,65 @@ interface HeroProps {
 }
 
 const Hero = ({ sectionVariant }: HeroProps) => {
+  const jobTitles = [
+    personalInfo.role,
+    "Frontend Developer",
+    "React.js Developer",
+    "Next.js Developer",
+    "Full Stack Developer",
+  ];
+
+  const [titleIndex, setTitleIndex] = useState(0);
+  const [displayedTitle, setDisplayedTitle] = useState("");
+  const [phase, setPhase] = useState("typing");
+
+  useEffect(() => {
+    const currentTitle = jobTitles[titleIndex];
+
+    let timeout:any;
+
+    if (phase === "typing") {
+      if (displayedTitle.length < currentTitle.length) {
+        timeout = setTimeout(() => {
+          setDisplayedTitle(
+            currentTitle.slice(0, displayedTitle.length + 1)
+          );
+        }, 90);
+      } else {
+        timeout = setTimeout(() => {
+          setPhase("pausing");
+        }, 1800);
+      }
+    }
+
+    if (phase === "pausing") {
+      timeout = setTimeout(() => {
+        setPhase("deleting");
+      }, 100);
+    }
+
+    if (phase === "deleting") {
+      if (displayedTitle.length > 0) {
+        timeout = setTimeout(() => {
+          setDisplayedTitle(
+            currentTitle.slice(0, displayedTitle.length - 1)
+          );
+        }, 50);
+      } else {
+        timeout = setTimeout(() => {
+          setTitleIndex((prev) => (prev + 1) % jobTitles.length);
+          setPhase("typing");
+        }, 300);
+      }
+    }
+
+    return () => {
+      if (timeout) {
+        clearTimeout(timeout);
+      }
+    };
+  }, [displayedTitle, phase, titleIndex, jobTitles]);
+
   return (
     <motion.section
       className="relative grid items-center gap-16 py-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-20 lg:py-16"
@@ -70,12 +129,40 @@ const Hero = ({ sectionVariant }: HeroProps) => {
             </span>
           </h1>
 
-          {/* Role */}
-          <div className="flex items-center gap-3">
-            <span className="h-px w-8 bg-primary" />
+          {/* =================================================
+              Animated Job Title
+          ================================================== */}
 
-            <h2 className="bg-gradient-to-r from-cyan-400 via-blue-500 to-indigo-500 bg-clip-text text-xl font-bold text-transparent sm:text-2xl">
-              {personalInfo.role}
+          <div className="flex items-center gap-3">
+            <span className="h-px w-8 shrink-0 bg-primary" />
+
+            <h2
+              className="
+                min-h-[30px]
+                bg-gradient-to-r
+                from-cyan-400
+                via-blue-500
+                to-indigo-500
+                bg-clip-text
+                text-xl
+                font-bold
+                text-transparent
+                sm:min-h-[36px]
+                sm:text-2xl
+              "
+              aria-live="polite"
+            >
+              {displayedTitle}
+              <span
+                className="
+                  ml-1
+                  inline-block
+                  animate-pulse
+                  text-primary
+                "
+              >
+                |
+              </span>
             </h2>
           </div>
 
@@ -204,12 +291,24 @@ const Hero = ({ sectionVariant }: HeroProps) => {
             <div className="absolute inset-0 bg-gradient-to-t from-background/30 via-transparent to-transparent" />
 
             {/* Corner decoration */}
-            <div className="absolute right-5 top-5 flex h-10 w-10 items-center justify-center rounded-xl border border-white/20 bg-background/50 backdrop-blur-md">
+            <div
+              className="
+                absolute right-5 top-5
+                flex h-10 w-10
+                items-center justify-center
+                rounded-xl
+                border border-white/20
+                bg-background/50
+                backdrop-blur-md
+              "
+            >
               <Sparkles className="h-5 w-5 text-cyan-400" />
             </div>
           </div>
 
-          {/* ───────── Floating stats ───────── */}
+          {/* =================================================
+              Floating Stats
+          ================================================== */}
 
           <FloatingCard
             className="-left-8 top-10 sm:-left-12"
@@ -280,9 +379,13 @@ function FloatingCard({
         ${className ?? ""}
       `}
     >
-      <p className="text-2xl font-bold text-primary">{value}</p>
+      <p className="text-2xl font-bold text-primary">
+        {value}
+      </p>
 
-      <p className="text-xs text-muted-foreground">{label}</p>
+      <p className="text-xs text-muted-foreground">
+        {label}
+      </p>
     </div>
   );
 }
