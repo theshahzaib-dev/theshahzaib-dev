@@ -6,7 +6,7 @@ export const personalInfo = {
   tag: "Building Modern Web Experiences",
   email: "theshahzaib.dev@gmail.com",
   phone: "+92 302 0549257",
-  location: "Lodhran, Punjab, Pakistan",
+  location: "204 G, Khayaban-e-Amin, Lahore, Punjab, Pakistan",
   github: "https://github.com/theshahzaib-dev",
   linkedin: "https://www.linkedin.com/in/theshahzaibdev/",
   facebook: "https://www.facebook.com/mshahzaibbalouch80",
@@ -69,7 +69,6 @@ export const journey = [
       "Continuing to grow as a Full Stack Developer by building production-ready applications, contributing to SaaS products, improving my engineering skills, and pursuing opportunities to create reliable and scalable software solutions.",
   },
 ];
-
 
 export const achievements = [
   {
@@ -159,7 +158,6 @@ export const experiences = [
     ],
   },
 ];
-
 
 export const highlights = [
   {

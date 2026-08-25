@@ -17,7 +17,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { personalInfo } from "@/data/data";
 import TitleSection from "@/components/TitleSection";
 
-const contacts = [
+export const contacts = [
   {
     title: "Email",
     value: personalInfo.email,
@@ -35,7 +35,7 @@ const contacts = [
   {
     title: "Location",
     value: personalInfo.location,
-    href: "https://maps.google.com/?q=Lodhran,Pakistan",
+    href: "https://maps.app.goo.gl/VPbUoLX9Mgm6Lej16",
     icon: MapPin,
     description: "Available for remote opportunities worldwide.",
   },

@@ -60,10 +60,10 @@ export default function AIDrawer() {
             <div className="flex items-center justify-between border-b px-5 py-4">
               <div>
                 <h2 className="text-lg font-semibold">
-                  ✨ Portfolio Assistant
+                  ✨ Shahzaib's AI
                 </h2>
                 <p className="text-sm text-muted-foreground">
-                  Ask anything about me
+                  Ask anything about Shahzaib
                 </p>
               </div>
 

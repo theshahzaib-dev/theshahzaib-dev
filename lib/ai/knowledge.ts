@@ -14,9 +14,11 @@ import {
 } from "@/data/skills";
 import { stats } from "@/data/stats";
 import { otherProjects, developmentProcess } from "@/data/projects";
+import { contacts } from "@/app/contact/page";
 
 export const portfolioKnowledge = {
   personalInfo,
+  contacts,
   journey,
   achievements,
   experiences,
