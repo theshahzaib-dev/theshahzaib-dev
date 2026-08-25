@@ -5,7 +5,7 @@ export const stats = [
     label: "Projects Completed",
   },
   {
-    value: "3+",
+    value: "5+",
     label: "Client Projects",
   },
   {
