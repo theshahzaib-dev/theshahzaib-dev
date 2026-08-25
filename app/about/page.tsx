@@ -109,7 +109,7 @@ export default function AboutPage() {
 
             <div className="relative overflow-hidden rounded-2xl border border-border bg-card shadow-xl">
               <img
-                src="/assets/images/profile.png"
+                src="/assets/images/profile.webp"
                 alt="Muhammad Shahzaib"
                 className="aspect-[3/4] w-full object-cover"
               />

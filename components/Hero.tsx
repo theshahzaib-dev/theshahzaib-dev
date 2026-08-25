@@ -282,7 +282,7 @@ const Hero = ({ sectionVariant }: HeroProps) => {
           >
             {/* Image */}
             <img
-              src="/assets/images/profile.png"
+              src="/assets/images/profile.webp"
               alt="Shahzaib Balouch"
               className="h-full w-full object-cover"
             />
