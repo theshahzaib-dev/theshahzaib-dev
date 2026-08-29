@@ -1,6 +1,89 @@
 export const featuredProjects = [
   {
     id: 0,
+    title: "SchoolPilot - School Management System",
+    category: "SaaS Product",
+    status: "In Process",
+    image: "/assets/images/projects/schoolpilot.png",
+    description:
+      "A modern multi-tenant school management platform designed to digitize academic and administrative operations for educational institutions. SchoolPilot provides dedicated experiences for administrators, teachers, students, and parents with multilingual support and centralized school management.",
+    role: [
+      "Full Stack Development",
+      "System Architecture",
+      "SaaS Architecture",
+      "Dashboard Development",
+      "Authentication & Authorization",
+      "Database Design",
+      "Responsive UI Development",
+      "Multi-Language Implementation",
+    ],
+    technologies: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "MongoDB",
+      "REST APIs",
+      "JWT",
+      "Vercel",
+    ],
+    features: [
+      "Multi-Tenant School Management",
+      "Admin Dashboard",
+      "Teacher Portal",
+      "Student Portal",
+      "Parent Portal",
+      "Student Management",
+      "Teacher Management",
+      "Attendance Management",
+      "Academic Management",
+      "English & Urdu Localization",
+      "Role-Based Access Control",
+      "Responsive Interface",
+    ],
+    repo: "Private",
+    live: "https://schoolpilot-saasifyhq.vercel.app/",
+  },
+
+  {
+    id: 1,
+    title: "SaaSifyHQ",
+    category: "SaaS Platform",
+    status: "In Process",
+    image: "/assets/images/projects/saasifyhq.png",
+    description:
+      "A SaaS application provider platform focused on designing, developing, and delivering modern cloud-based software solutions for businesses. SaaSifyHQ serves as the foundation for building and presenting industry-specific SaaS products.",
+    role: [
+      "Product Development",
+      "Frontend Development",
+      "UI/UX Design",
+      "System Architecture",
+      "SaaS Product Development",
+      "Responsive Web Development",
+      "Deployment",
+    ],
+    technologies: [
+      "Next.js",
+      "React.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vercel",
+    ],
+    features: [
+      "Modern SaaS Website",
+      "Product Showcase",
+      "SaaS Product Portfolio",
+      "Responsive Design",
+      "Modern UI Components",
+      "AI Assistant Integration",
+      "Service Presentation",
+      "Business Information",
+    ],
+    repo: "Private",
+    live: "https://saasifyhq.vercel.app/",
+  },
+
+  {
+    id: 2,
 
     title: "WorkForce Pro - HR Management System",
 
@@ -49,12 +132,11 @@ export const featuredProjects = [
       "Responsive Admin Panel",
     ],
 
-
     github: "https://github.com/stratixtechnologies/workforce-pro",
     repo: "Public",
   },
   {
-    id: 1,
+    id: 3,
 
     title: "ScanGPT – AI-Powered OCR & Document Intelligence",
 
@@ -108,7 +190,7 @@ export const featuredProjects = [
     github: "https://github.com/theshahzaib-dev/scangpt",
   },
   {
-    id: 3,
+    id: 4,
     title: "CallerLens - Caller Intelligence Dashboard",
     category: "Personal Project",
     status: "Completed",
@@ -125,7 +207,13 @@ export const featuredProjects = [
       "Responsive Design",
     ],
 
-    technologies: ["Next.js", "React", "TypeScript", "Tailwind CSS", "React Charts"],
+    technologies: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "React Charts",
+    ],
 
     features: [
       "Caller Search",
@@ -138,9 +226,9 @@ export const featuredProjects = [
     live: "https://v0-callerlens.vercel.app/",
     github: "https://github.com/stratixtechnologies/CallerLens",
   },
- 
+
   {
-    id: 7,
+    id: 5,
     title: "Click Desire",
     category: "E-Commerce Platform",
     status: "Completedd",
@@ -171,7 +259,7 @@ export const featuredProjects = [
     github: undefined,
   },
   {
-    id: 15,
+    id: 6,
 
     title: "Arwa Technologies Company Website",
 
@@ -218,9 +306,45 @@ export const featuredProjects = [
 ];
 
 export const otherProjects = [
-  
   {
-    id: 2,
+    id: 0,
+    title: "AttendSwift - Attendance Management System",
+    category: "Attendance Management Application",
+    status: "Completed",
+    image: "/assets/images/projects/attendswift.png",
+    description:
+      "A lightweight, modern, and mobile application attendance management application designed primarily for teachers. AttendSwift simplifies daily attendance tracking through an intuitive interface optimized for fast use across desktop and mobile devices.",
+    role: [
+      "Full Stack Development",
+      "Frontend Development",
+      "UI/UX Design",
+      "Attendance System Architecture",
+      "Responsive Web Development",
+      "Authentication",
+      "Mobile UI Optimization",
+    ],
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Github Actions",
+    ],
+    features: [
+      "Teacher Attendance Management",
+      "Student Management",
+      "Daily Attendance Tracking",
+      "Attendance History",
+      "Mobile-Friendly Interface",
+      "Responsive Dashboard",
+      "Teacher-Centered Workflow",
+      "Fast Attendance Marking",
+    ],
+    repo: "Private",
+    live: "https://saasifyhq.vercel.app/tools/attendswift",
+  },
+  {
+    id: 1,
 
     title: "BookNest - A World of Books at Your Fingertips",
 
@@ -276,7 +400,7 @@ export const otherProjects = [
     github: "https://github.com/theshahzaib-dev/booknest",
   },
   {
-    id: 4,
+    id: 2,
     title: "PhotoFusion - AI Photo Editor",
     category: "Personal Project",
     status: "Completed",
@@ -306,7 +430,7 @@ export const otherProjects = [
     github: "https://github.com/stratixtechnologies/PhotoFusion",
   },
   {
-    id: 5,
+    id: 3,
 
     title: "Government Graduate College Lodhran",
 
