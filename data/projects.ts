@@ -1,5 +1,69 @@
 export const featuredProjects = [
   {
+    id: 7,
+    title: "Mr. Shoes - E-Commerce Platform",
+    category: "Full-Stack E-Commerce",
+    status: "Completed",
+    repo: "Private",
+    image: "/assets/images/projects/mrshoes.png",
+
+    description:
+      "A complete full-stack e-commerce platform for a footwear business, featuring a dynamic customer storefront and a comprehensive admin dashboard. The platform is server-driven, with products, categories, inventory, orders, customers, offers, and other business data managed through secure backend APIs and a centralized admin control system.",
+
+    role: [
+      "Full Stack Development",
+      "System Architecture",
+      "E-Commerce Development",
+      "Frontend Development",
+      "Backend API Development",
+      "Database Design",
+      "Admin Dashboard Development",
+      "Authentication & Authorization",
+      "Order Management",
+      "Inventory Management",
+      "Responsive UI Development",
+    ],
+
+    technologies: [
+      "Next.js",
+      "React.js",
+      "JavaScript",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "Mongoose",
+      "REST APIs",
+      "JWT",
+      "Vercel",
+    ],
+
+    features: [
+      "Dynamic Product Catalog",
+      "Product Categories",
+      "Product Search & Filtering",
+      "Product Details",
+      "Product Reviews",
+      "Size & Color Variants",
+      "Shopping Cart",
+      "Wishlist",
+      "Checkout System",
+      "Order Management",
+      "Customer Management",
+      "Inventory & Stock Management",
+      "Offers & Promotions",
+      "Admin Dashboard",
+      "Complete Admin Control",
+      "Server-Driven Product Data",
+      "Server-Driven Order Data",
+      "Authentication & Authorization",
+      "Responsive Customer Storefront",
+      "Responsive Admin Panel",
+    ],
+
+    live: "https://mr-shose.vercel.app/",
+    github: "https://github.com/theshahzaib-dev/mr-shose",
+  },
+  {
     id: 0,
     title: "SchoolPilot - School Management System",
     category: "SaaS Product",
@@ -231,7 +295,7 @@ export const featuredProjects = [
     id: 5,
     title: "Click Desire",
     category: "E-Commerce Platform",
-    status: "Completedd",
+    status: "Completed",
     repo: "Private",
     image: "/assets/images/projects/clickdesire.png",
     description:
@@ -307,6 +371,59 @@ export const featuredProjects = [
 
 export const otherProjects = [
   {
+    id: 14,
+    title: "TeachX - Teacher Workspace",
+    category: "Education Management Application",
+    status: "Completed",
+    repo: "Private",
+    image: "/assets/images/projects/teachx.png",
+
+    description:
+      "An offline-first teacher workspace designed to manage the complete daily academic workflow from a single mobile-friendly application. TeachX enables teachers to manage classes and students, record attendance, plan lessons, track assessments and marks, monitor syllabus progress, and generate reports while continuing to work with limited or unreliable internet connectivity.",
+
+    role: [
+      "Full Stack Development",
+      "Application Architecture",
+      "Education Workflow Design",
+      "Offline-First Development",
+      "Frontend Development",
+      "Data Management",
+      "Responsive UI Development",
+      "Authentication & Licensing",
+      "Backup & Restore System",
+    ],
+
+    tech: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "Local Storage",
+      "JSON",
+      "GitHub Actions",
+    ],
+
+    features: [
+      "Class & Student Management",
+      "Subject & Schedule Management",
+      "Daily Attendance Tracking",
+      "Lesson Planning",
+      "Assessment & Marks Management",
+      "Syllabus Progress Tracking",
+      "Academic Reports",
+      "Printable Summaries",
+      "JSON Backup & Restore",
+      "Offline-First Data Management",
+      "Mobile-Friendly Interface",
+      "Local Data Storage",
+      "License Verification",
+      "Free Trial System",
+    ],
+
+    live: "https://saasifyhq.vercel.app/tools/teachx",
+    github: undefined,
+  },
+  {
     id: 0,
     title: "AttendSwift - Attendance Management System",
     category: "Attendance Management Application",
@@ -323,13 +440,7 @@ export const otherProjects = [
       "Authentication",
       "Mobile UI Optimization",
     ],
-    tech: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "Bootstrap",
-      "Github Actions",
-    ],
+    tech: ["HTML", "CSS", "JavaScript", "Bootstrap", "Github Actions"],
     features: [
       "Teacher Attendance Management",
       "Student Management",
