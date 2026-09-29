@@ -121,7 +121,9 @@
   --sidebar-ring: #04aeef;
 }
 
-
+* {
+  cursor: none !important;
+}
 
 @layer base {
   * {

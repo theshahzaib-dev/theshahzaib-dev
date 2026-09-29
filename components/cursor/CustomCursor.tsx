@@ -91,10 +91,8 @@ export default function CustomCursor() {
     >
       <div
         className={cn(
-          "-translate-x-1/2 -translate-y-1/2 rounded-full border-2 backdrop-blur-md transition-all duration-300",
-          isPointer
-            ? "h-5 w-5 border-primary bg-background"
-            : "h-5 w-5 border-accent bg-primary",
+          "-translate-x-1/2 -translate-y-1/2 rounded-full border-2 bg-transparent transition-all duration-300",
+          isPointer ? "h-5 w-5 border-primary" : "h-5 w-5 border-accent",
         )}
       />
     </motion.div>
