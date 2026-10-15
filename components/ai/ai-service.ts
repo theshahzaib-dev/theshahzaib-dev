@@ -9,9 +9,12 @@ export async function sendToGemini(message: string) {
     }),
   });
 
+  const result = await response.json();
   if (!response.ok) {
-    throw new Error("Failed to contact AI.");
+    throw new Error(
+      typeof result.reply === "string" ? result.reply : "Failed to contact AI."
+    );
   }
 
-  return response.json();
+  return result;
 }

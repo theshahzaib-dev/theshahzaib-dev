@@ -78,13 +78,16 @@ export function AIProvider({ children }: { children: ReactNode }) {
       };
 
       setMessages((prev) => [...prev, assistantMessage]);
-    } catch {
+    } catch (cause) {
       setMessages((prev) => [
         ...prev,
         {
           id: crypto.randomUUID(),
           role: "assistant",
-          content: "Something went wrong while contacting Gemini.",
+          content:
+            cause instanceof Error
+              ? cause.message
+              : "Something went wrong while contacting Gemini.",
           createdAt: new Date(),
         },
       ]);
