@@ -3,7 +3,7 @@
 import TitleSection from "@/components/TitleSection";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { experiences, highlights, journey } from "@/data/data";
+import { education, experiences, highlights, journey } from "@/data/data";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
 
@@ -183,6 +183,45 @@ export default function AboutPage() {
               </span>
 
               <h3 className="mt-2 text-2xl font-semibold">{item.title}</h3>
+
+              <p className="mt-3 leading-8 text-muted-foreground">
+                {item.description}
+              </p>
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* My Education */}
+      <motion.section
+        className="space-y-10"
+        variants={sectionVariant}
+        initial="hidden"
+        animate="visible"
+      >
+         <TitleSection
+      sectionVariant={sectionVariant}
+      title="Education & Professional Training"
+      subTitle="🎓 My Education"
+      description="Building a strong academic foundation while continuously developing practical software engineering and full-stack development skills."
+    />
+
+        <div className="relative border-l border-primary/20 pl-8">
+          {education.map((item, index) => (
+            <motion.div
+              key={index}
+              whileHover={{ x: 8 }}
+              className="relative mb-12"
+            >
+              <div className="absolute -left-[42px] flex h-8 w-8 items-center justify-center rounded-full border-4 border-background bg-primary text-xs font-bold text-primary-foreground">
+                {index + 1}
+              </div>
+
+              <span className="text-sm font-semibold text-primary">
+                {item.year}
+              </span>
+
+              <h3 className="mt-2 text-2xl font-semibold">{item.degree}</h3>
 
               <p className="mt-3 leading-8 text-muted-foreground">
                 {item.description}

@@ -1,12 +1,17 @@
 import { GoogleGenAI } from "@google/genai";
 import { NextRequest, NextResponse } from "next/server";
 import { systemPrompt } from "@/lib/ai/system-prompt";
+import { personalInfo } from "@/data/data";
+
 
 const MODEL_FALLBACKS = [
-  "gemini-3.8-flash",
-  "gemini-3.1-flash-lite",
-  "gemini-3.8-flash"
+  "gemini-3.8-flash",       // Primary: capable general-purpose chat
+  "gemini-3.7-flash",       // Alternative Flash model
+  "gemini-3.6-flash",       // Previous-generation fallback
+  "gemini-3.5-flash-lite",  // Lightweight fallback
+  "gemini-3.1-flash-lite",  // Additional fallback
 ];
+
 
 const delay = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -32,35 +37,25 @@ function getErrorDetails(error: unknown) {
   };
 }
 
-function getUserError(status: number | undefined, message: string) {
+function getUserError(status: number | undefined, message: string): string {
   const normalizedMessage = message.toLowerCase();
-  if (
-    status === 403 &&
-    (normalizedMessage.includes("project has been denied access") ||
-      normalizedMessage.includes("contact support"))
-  ) {
-    return "Google has denied Gemini API access to the project for this key. Check that the key belongs to the intended Google AI Studio project and contact Google AI support if access remains denied.";
-  }
-  if (
-    status === 401 ||
-    status === 403 ||
-    (status === 400 &&
-      (normalizedMessage.includes("api key") ||
-        normalizedMessage.includes("api_key") ||
-        normalizedMessage.includes("permission")))
-  ) {
-    return "Gemini rejected the API key or its permissions. Check that GOOGLE_GEMINI_API_KEY is valid and allowed to use the Gemini API.";
-  }
-  if (status === 429) {
-    return "The Gemini API quota or rate limit has been reached. Check the quota for the Google project that owns this API key.";
-  }
-  if (status === 404) {
-    return "The configured Gemini models are unavailable for this API key. Check model availability in Google AI Studio.";
-  }
-  if (status !== undefined && status >= 500) {
-    return "Gemini is temporarily unavailable. Please try again shortly.";
-  }
-  return "Gemini could not process the request. Check the server logs for the API error.";
+
+  // Log technical details on the server for debugging.
+  console.error("[Gemini API Error]", { status, message });
+
+  // Keep this message consistent for every Gemini error.
+  return [
+    "### Sorry, we're having trouble connecting to Gemini!",
+    "",
+    "I couldn't process your message right now. Please try again in a little while.",
+    "",
+    "If the problem continues, please reach out to **Mr. Shahzaib** through any of these channels:",
+    "",
+    `- [**LinkedIn**](${personalInfo.linkedin})`,
+    `- [**Facebook**](${personalInfo.facebook})`,
+    `- [**GitHub**](${personalInfo.github})`,
+    `- [**WhatsApp**](https://wa.me/923020549257)`,
+  ].join("\n");
 }
 
 export async function POST(req: NextRequest) {
@@ -70,16 +65,21 @@ export async function POST(req: NextRequest) {
     if (!message) {
       return NextResponse.json(
         { reply: "Message is required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
     const apiKey = process.env.GOOGLE_GEMINI_API_KEY;
     if (!apiKey) {
-      console.error("[Gemini API Error]: GOOGLE_GEMINI_API_KEY is not configured.");
+      console.error(
+        "[Gemini API Error]: GOOGLE_GEMINI_API_KEY is not configured.",
+      );
       return NextResponse.json(
-        { reply: "Gemini is not configured on the server. Set GOOGLE_GEMINI_API_KEY and restart the app." },
-        { status: 500 }
+        {
+          reply:
+            "Gemini is not configured on the server. Set GOOGLE_GEMINI_API_KEY and restart the app.",
+        },
+        { status: 500 },
       );
     }
 
@@ -117,21 +117,26 @@ export async function POST(req: NextRequest) {
         if (!canTryFallback) {
           return NextResponse.json(
             { reply: getUserError(details.status, details.message) },
-            { status: details.status === 401 || details.status === 403 ? 502 : 400 }
+            {
+              status:
+                details.status === 401 || details.status === 403 ? 502 : 400,
+            },
           );
         }
 
-        if (details.status === 429 || (details.status !== undefined && details.status >= 500)) {
+        if (
+          details.status === 429 ||
+          (details.status !== undefined && details.status >= 500)
+        ) {
           await delay(250);
         }
       }
-
     }
 
     const details = getErrorDetails(lastError);
     return NextResponse.json(
       { reply: getUserError(details.status, details.message) },
-      { status: details.status === 429 ? 429 : 503 }
+      { status: details.status === 429 ? 429 : 503 },
     );
   } catch (error: unknown) {
     const details = getErrorDetails(error);
@@ -139,9 +144,10 @@ export async function POST(req: NextRequest) {
 
     return NextResponse.json(
       {
-        reply: "The chat request could not be completed. Check the server logs for details.",
+        reply:
+          "The chat request could not be completed. Check the server logs for details.",
       },
-      { status: 400 }
+      { status: 400 },
     );
   }
 }

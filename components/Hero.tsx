@@ -13,6 +13,8 @@ import {
   Sparkles,
 } from "lucide-react";
 import { personalInfo } from "@/data/data";
+import { featuredProjects, otherProjects } from "@/data/projects";
+import { techStack } from "@/data/skills";
 
 interface HeroProps {
   sectionVariant: any;
@@ -25,6 +27,7 @@ const Hero = ({ sectionVariant }: HeroProps) => {
     "React.js Developer",
     "Next.js Developer",
     "Full Stack Developer",
+    "Node.js Developer",
   ];
 
   const [titleIndex, setTitleIndex] = useState(0);
@@ -312,13 +315,13 @@ const Hero = ({ sectionVariant }: HeroProps) => {
 
           <FloatingCard
             className="-left-8 top-10 sm:-left-12"
-            value="6+"
+            value={otherProjects.length + featuredProjects.length + "+"}
             label="Projects"
           />
 
           <FloatingCard
             className="-right-8 bottom-16 sm:-right-12"
-            value="8+"
+            value={techStack[0].technologies.length + "+"}
             label="Technologies"
           />
 

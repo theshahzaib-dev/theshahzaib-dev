@@ -13,6 +13,7 @@ export const personalInfo = {
   portfolio: "https://www.theshahzaibdev.online",
 };
 
+
 export const journey = [
   {
     year: "2021",
@@ -33,42 +34,55 @@ export const journey = [
       "Joined Tareen Institute of Computer Education & Resources (TICER), Lodhran, where I completed intensive MERN Stack training covering React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and full-stack application development.",
   },
   {
-    year: "2024",
-    title: "Arwa Technologies",
+    year: "2023 - 2024",
+    title: "Frontend Development Internship at Arwa Technologies",
     description:
-      "Started my professional career as a Front End Developer at Arwa Technologies, developing responsive web applications with React.js, Next.js, JavaScript, and Tailwind CSS. Built reusable UI components and contributed to a legacy VB/WinForms-to-ASP.NET Core migration project using C#.",
+      "Completed a frontend development internship at Arwa Technologies, gaining practical experience with React.js, Next.js, JavaScript, and Tailwind CSS. Strengthened my skills in responsive design, reusable components, and modern frontend development workflows.",
+  },
+  {
+    year: "2024",
+    title: "Arwa Technologies — Frontend Developer",
+    description:
+      "Advanced into a Frontend Developer role at Arwa Technologies, developing responsive web applications with React.js, Next.js, JavaScript, and Tailwind CSS. Built reusable UI components and contributed to a legacy VB/WinForms-to-ASP.NET Core migration project using C#.",
   },
   {
     year: "2024 - 2025",
-    title: "Solution Carrier",
+    title: "Solution Carrier — Full-Stack Software Developer",
     description:
-      "Joined Solution Carrier as a Software Engineer (Full-Stack), working primarily on production Node.js applications, system architecture, authentication, and authorization. Built the frontend for BedSpace, a hotel booking platform, and developed core backend functionality for Click Desire, an ecommerce platform.",
+      "Joined Solution Carrier as a Software Developer (Full-Stack), working primarily on production Node.js applications, system architecture, authentication, and authorization. Built the frontend for BedSpace, a hotel booking platform, and developed core backend functionality for Click Desire, an ecommerce platform.",
   },
   {
     year: "2025 - 2026",
-    title: "Focused on Education",
+    title: "Completing Intermediate Education",
     description:
-      "Focused on completing my Intermediate in Computer Sciences at Government Graduate College Lodhran while continuing to develop my technical skills and prepare for the next stage of my professional career.",
+      "Focused on completing my Intermediate in Computer Sciences (ICS) at Government Graduate College Lodhran while continuing to develop my technical skills and prepare for the next stage of my professional career.",
   },
   {
     year: "2026",
-    title: "Back to Building",
+    title: "Expanding My Full-Stack Portfolio",
     description:
-      "Returned to active professional development and worked on full-stack applications and projects, including the official GGC Lodhran college website and SaaS-based products using modern technologies such as Next.js, React.js, Node.js, Express.js, and MongoDB.",
+      "Worked on full-stack applications and projects, including the official Government Graduate College Lodhran website and SaaS-based products using modern technologies such as Next.js, React.js, Node.js, Express.js, and MongoDB.",
   },
   {
     year: "June 2026 - Present",
-    title: "SaaSifyHQ",
+    title: "SaaSifyHQ — Full-Stack Developer",
     description:
-      "Joined SaaSifyHQ as a Full Stack Developer, building scalable and responsive interfaces and backend services. Working across Next.js, React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and role-based workflows while contributing to production-ready SaaS features.",
+      "Contributing to SaaSifyHQ by building responsive interfaces, backend services, and SaaS features. Working across Next.js, React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and role-based workflows.",
+  },
+  {
+    year: "2026 - Present",
+    title: "BS Software Engineering — Virtual University of Pakistan",
+    description:
+      "Pursuing a Bachelor of Science in Software Engineering while continuing to build real-world applications, strengthen software engineering fundamentals, and grow professionally as a Full-Stack Developer.",
   },
   {
     year: "Present",
     title: "Building the Future",
     description:
-      "Continuing to grow as a Full Stack Developer by building production-ready applications, contributing to SaaS products, improving my engineering skills, and pursuing opportunities to create reliable and scalable software solutions.",
+      "Continuing to grow as a Full-Stack Developer by building production-ready applications, contributing to SaaS products, improving my engineering skills, and pursuing opportunities to create reliable and scalable software solutions.",
   },
 ];
+
 
 export const achievements = [
   {
@@ -108,7 +122,7 @@ export const experiences = [
     company: "SaaSifyHQ",
     role: "Full Stack Developer",
     duration: "June 2026 – Present",
-    type: "Full-Time",
+    type: "Part-Time",
     description:
       "Developed scalable, responsive interfaces and backend services while collaborating on product requirements, debugging, API integration, and production-ready delivery. Built and maintained full-stack SaaS features using Next.js, React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and role-based workflows.",
     technologies: [
@@ -181,3 +195,35 @@ export const highlights = [
       "I continuously strengthen my development skills by building practical projects, exploring modern technologies and development workflows, and improving my understanding of scalable full-stack application architecture.",
   },
 ];
+
+
+export const education = [
+  {
+    year: "2026 - Present",
+    degree: "Bachelor of Science in Software Engineering",
+    institution: "Virtual University of Pakistan",
+    location: "Pakistan",
+    status: "Currently Enrolled",
+    description:
+      "Pursuing a bachelor's degree in Software Engineering to strengthen my foundations in software development, programming, computer science, and software engineering principles while continuing to build real-world applications.",
+  },
+  {
+    year: "Completed 2025",
+    degree: "Intermediate in Computer Sciences (ICS)",
+    institution: "Government Graduate College Lodhran",
+    location: "Lodhran, Punjab, Pakistan",
+    status: "Completed",
+    description:
+      "Completed intermediate education in Computer Sciences, building an academic foundation for further studies in software engineering and computer science.",
+  },
+  {
+    year: "2022 - 2023",
+    degree: "MERN Stack Development Training",
+    institution: "Tareen Institute of Computer Education & Resources (TICER)",
+    location: "Lodhran, Punjab, Pakistan",
+    status: "Completed",
+    description:
+      "Completed professional training in full-stack web development, covering React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and modern web application development.",
+  },
+];
+

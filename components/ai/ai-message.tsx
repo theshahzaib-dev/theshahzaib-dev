@@ -15,17 +15,12 @@ export default function AIMessage({ message }: AIMessageProps) {
 
   return (
     <div
-      className={cn(
-        "flex w-full",
-        isUser ? "justify-end" : "justify-start"
-      )}
+      className={cn("flex w-full", isUser ? "justify-end" : "justify-start")}
     >
       <div
         className={cn(
           "max-w-[85%] rounded-2xl px-4 py-3",
-          isUser
-            ? "bg-primary text-primary-foreground"
-            : "border bg-card"
+          isUser ? "bg-primary text-primary-foreground" : "border bg-card",
         )}
       >
         {isUser ? (
@@ -43,32 +38,33 @@ export default function AIMessage({ message }: AIMessageProps) {
               h3: ({ children }) => (
                 <h3 className="mb-2 mt-3 text-lg font-semibold">{children}</h3>
               ),
-              p: ({ children }) => (
-                <p className="mb-3 leading-7">{children}</p>
-              ),
+              p: ({ children }) => <p className="mb-3 leading-7">{children}</p>,
               ul: ({ children }) => (
-                <ul className="mb-3 list-disc space-y-1 pl-5">
-                  {children}
-                </ul>
+                <ul className="mb-3 list-disc space-y-1 pl-5">{children}</ul>
               ),
               ol: ({ children }) => (
-                <ol className="mb-3 list-decimal space-y-1 pl-5">
-                  {children}
-                </ol>
+                <ol className="mb-3 list-decimal space-y-1 pl-5">{children}</ol>
               ),
-              li: ({ children }) => (
-                <li className="leading-7">{children}</li>
-              ),
+              li: ({ children }) => <li className="leading-7">{children}</li>,
               strong: ({ children }) => (
-                <strong className="font-semibold">
-                  {children}
-                </strong>
+                <strong className="font-semibold">{children}</strong>
               ),
               code: ({ children }) => (
                 <code className="rounded bg-muted px-1.5 py-0.5 text-sm">
                   {children}
                 </code>
               ),
+              a: ({ href, children }) => {
+
+                return (
+                  <a
+                    href={href}
+                    className="font-medium text-primary underline underline-offset-4 hover:opacity-80"
+                  >
+                    {children}
+                  </a>
+                );
+              },
             }}
           >
             {message.content}
