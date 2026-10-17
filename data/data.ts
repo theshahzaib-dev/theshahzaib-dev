@@ -119,12 +119,12 @@ export const achievements = [
 
 export const experiences = [
   {
-    company: "SaaSifyHQ",
-    role: "Full Stack Developer",
+    company: "Self-Employed",
+    role: "Independent Full-Stack Developer",
     duration: "June 2026 – Present",
-    type: "Part-Time",
+    type: "Self-Employed",
     description:
-      "Developed scalable, responsive interfaces and backend services while collaborating on product requirements, debugging, API integration, and production-ready delivery. Built and maintained full-stack SaaS features using Next.js, React.js, Node.js, Express.js, MongoDB, REST APIs, authentication, and role-based workflows.",
+      "Building independent software products and full-stack web applications through SaaSifyHQ. Developing responsive user interfaces, backend services, REST APIs, authentication, and role-based access workflows using Next.js, React.js, Node.js, Express.js, and MongoDB. Managing software development from requirements gathering and implementation through testing and deployment.",
     technologies: [
       "Next.js",
       "React.js",
@@ -134,6 +134,7 @@ export const experiences = [
       "REST API",
       "Authentication",
       "Role-Based Access Control",
+      "TypeScript",
     ],
   },
   {
@@ -142,7 +143,7 @@ export const experiences = [
     duration: "October 2024 – December 2025",
     type: "Full-Time",
     description:
-      "Worked as a backend-focused developer on production Node.js applications, including system architecture, authentication, and authorization. Built the frontend for BedSpace, a multi-page hotel booking platform, and developed core backend functionality including authentication, product management, and order processing for Click Desire, an ecommerce platform.",
+      "Worked as a backend-focused developer on production Node.js applications, including system architecture, authentication, and authorization. Built the frontend for BedSpace, a multi-page hotel booking platform, and developed core backend functionality, including authentication, product management, and order processing for Click Desire, an e-commerce platform.",
     technologies: [
       "Node.js",
       "Express.js",
@@ -160,7 +161,7 @@ export const experiences = [
     duration: "March 2024 – September 2024",
     type: "Full-Time",
     description:
-      "Developed responsive web applications using React.js, Next.js, JavaScript, and Tailwind CSS. Built reusable UI components to improve development speed and long-term maintainability. Collaborated closely with designers and developers to ship production-ready features and contributed to a legacy VB/WinForms-to-ASP.NET Core migration project using C#.",
+      "Developed responsive web applications using React.js, Next.js, JavaScript, and Tailwind CSS. Built reusable UI components to improve development speed and long-term maintainability. Collaborated with designers and developers to deliver production-ready features and contributed to a legacy VB/WinForms-to-ASP.NET Core migration project using C#.",
     technologies: [
       "React.js",
       "Next.js",
